@@ -1,3 +1,253 @@
 ---
 title: "Data Analysis"
 ---
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+
+# Import Libraries and Read Cleaned Dataset
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotly.express as px
+
+df = pd.read_csv('../data/population_dynamics_clean.csv')
+```
+
+
+## Adolescent Fertility Analysis
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| #| fig-cap: "Adolescent Fertility Rates from 2000 - 2023"
+
+# Adolescent Fertility Rate by Country Over Time
+
+# Prepare the data for plotting
+pivot_df = df.pivot(index='year', columns='country', values='adolescent_fertility')
+
+# Plot the line graph
+plt.figure(figsize=(12, 8))
+pivot_df.plot(ax=plt.gca(), marker='o')
+plt.title('Adolescent Fertility Rate by Country Over Time')
+plt.xlabel('Year')
+plt.ylabel('Adolescent Fertility Rate')
+plt.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.xticks(pivot_df.index, rotation=45)
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Average Adolescent Fertility Rates from 2000 - 2023"
+
+# Average Adolescent Fertility Rate by Country
+
+df.groupby('country')['adolescent_fertility'].mean()
+```
+
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Adolescent Fertility and Secondary School Enrollment Rates: India and United Kingdom"
+
+# Adolescent Fertility Rate and Secondary School Enrollment
+
+# Prepare the data for plotting
+pivot_df_adolescent_fertility = df.pivot(index='year', columns='country', values='adolescent_fertility')
+pivot_df_secondary_school_enrollment = df.pivot(index='year', columns='country', values='secondary_school_enrollment')
+
+# Plot the graphs
+fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharex=True, sharey=True)
+
+# India
+axes[0].plot(
+    pivot_df_adolescent_fertility.index,
+    pivot_df_adolescent_fertility['India'],
+    marker='o',
+    label='Adolescent Fertility Rate',
+    color='tab:blue'
+)
+axes[0].plot(
+    pivot_df_secondary_school_enrollment.index,
+    pivot_df_secondary_school_enrollment['India'],
+    marker='s',
+    label='Secondary School Enrollment',
+    color='tab:orange'
+)
+axes[0].set_title('India')
+axes[0].set_xlabel('Year')
+axes[0].set_ylabel('Rate')
+axes[0].legend()
+axes[0].tick_params(axis='x', rotation=45)
+
+# United Kingdom
+axes[1].plot(
+    pivot_df_adolescent_fertility.index,
+    pivot_df_adolescent_fertility['United Kingdom'],
+    marker='o',
+    label='Adolescent Fertility Rate',
+    color='tab:blue'
+)
+axes[1].plot(
+    pivot_df_secondary_school_enrollment.index,
+    pivot_df_secondary_school_enrollment['United Kingdom'],
+    marker='s',
+    label='Secondary School Enrollment',
+    color='tab:orange'
+)
+axes[1].set_title('United Kingdom')
+axes[1].set_xlabel('Year')
+axes[1].legend()
+axes[1].tick_params(axis='x', rotation=45)
+
+fig.suptitle('Adolescent Fertility Rate and Secondary School Enrollment\n(India and United Kingdom)', fontsize=16)
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+plt.show()
+```
+
+## Under-5 Mortality Rate Analysis
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Under-5 Mortality Rates from 2000 - 2023"
+
+#Under 5 Mortality Rate by Country Over Time
+
+# Prepare the data for plotting
+pivot_df = df.pivot(index='year', columns='country', values='under5_mortality')
+
+# Plot the line graph
+plt.figure(figsize=(12, 8))
+pivot_df.plot(ax=plt.gca(), marker='o')
+plt.title('Under 5 Mortality Rate by Country Over Time')
+plt.xlabel('Year')
+plt.ylabel('Under 5 Mortality Rate')
+plt.legend(title='Country', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.xticks(pivot_df.index, rotation=45)
+plt.tight_layout()
+plt.show()
+```
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Average Under-5 Mortality Rates from 2000 - 2023"
+
+# Average Under 5 Mortality Rate by Country
+
+df.groupby('country')['under5_mortality'].mean()
+```
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Under-5 Mortality & Adolescent Fertility Rates: Kenya and United Kingdom"
+
+# Under 5 Mortality Rate and Adolescent Fertility Rate
+
+# Prepare the data for plotting
+pivot_df_under5_mortality = df.pivot(index='year', columns='country', values='under5_mortality')
+pivot_df_adolescent_fertility = df.pivot(index='year', columns='country', values='adolescent_fertility')
+
+# Plot the graphs
+fig, axes = plt.subplots(1, 2, figsize=(14, 6), sharex=True, sharey=True)
+
+# Kenya
+axes[0].plot(
+    pivot_df_adolescent_fertility.index,
+    pivot_df_adolescent_fertility['Kenya'],
+    marker='o',
+    label='Adolescent Fertility Rate',
+    color='tab:blue'
+)
+axes[0].plot(
+    pivot_df_under5_mortality.index,
+    pivot_df_under5_mortality['Kenya'],
+    marker='s',
+    label='Under-5 Mortality Rate',
+    color='tab:orange'
+)
+axes[0].set_title('Kenya')
+axes[0].set_xlabel('Year')
+axes[0].set_ylabel('Rate')
+axes[0].legend()
+axes[0].tick_params(axis='x', rotation=45)
+
+# United Kingdom
+axes[1].plot(
+    pivot_df_adolescent_fertility.index,
+    pivot_df_adolescent_fertility['United Kingdom'],
+    marker='o',
+    label='Adolescent Fertility Rate',
+    color='tab:blue'
+)
+axes[1].plot(
+    pivot_df_under5_mortality.index,
+    pivot_df_under5_mortality['United Kingdom'],
+    marker='s',
+    label='Under-5 Mortality Rate',
+    color='tab:orange'
+)
+axes[1].set_title('United Kingdom')
+axes[1].set_xlabel('Year')
+axes[1].legend()
+axes[1].tick_params(axis='x', rotation=45)
+
+fig.suptitle('Under-5 Mortality and Adolescent Fertility Rates\n(Kenya and United Kingdom)', fontsize=16)
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+plt.show()
+```
+
+## Life Expectancy, Adolescent Fertility, and Under-5 Mortality
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Life Expectancy, Adolescent Fertility, and Under-5 Mortality from 2000 - 2023"
+
+# Normalize the life expectancy column to see clearer changes
+# 0.01 is added to avoid a minimum value of 0
+df['life_expectancy_norm'] = 0.01 + (df['life_expectancy'] - df['life_expectancy'].min()) / (df['life_expectancy'].max() - df['life_expectancy'].min())
+
+# Create an animated scatter plot/bubble chart
+fig = px.scatter(
+    df,
+    x = "under5_mortality",
+    y = "adolescent_fertility",
+    title = "Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time",
+    size = 'life_expectancy_norm',
+    color = 'country',
+    color_discrete_map = {
+        'Brazil': '#1f77b4',
+        'India': '#ff7f0e',
+        'Kenya': 'green',
+        'United Kingdom': 'red',
+        'United States': '#9467bd'
+    },
+    hover_name = 'country',
+    size_max = 60,
+    animation_frame = 'year',
+    animation_group ='country',
+    labels={
+        "under5_mortality": "Under-5 Mortality Rate",
+        "adolescent_fertility": "Adolescent Fertility Rate",
+        "life_expectancy_norm": "Life Expectancy (Normalized)"
+    }
+)
+
+fig.show()
+```
