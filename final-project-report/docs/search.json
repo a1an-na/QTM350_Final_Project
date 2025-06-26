@@ -18,7 +18,7 @@
     "href": "data_analysis.html",
     "title": "Data Analysis",
     "section": "",
-    "text": "Code\n# Import Libraries and Read Cleaned Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport plotly.express as px\n\ndf = pd.read_csv('../data/population_dynamics_clean.csv')"
+    "text": "Code\n# Import Libraries and Read Cleaned Dataset\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport plotly.express as px\n\ndf = pd.read_csv('../data/population_dynamics_clean.csv')"
   },
   {
     "objectID": "data_analysis.html#adolescent-fertility-analysis",
@@ -47,5 +47,12 @@
     "title": "Data Analysis",
     "section": "Life Expectancy, Adolescent Fertility, and Under-5 Mortality",
     "text": "Life Expectancy, Adolescent Fertility, and Under-5 Mortality\n\n\nCode\n# Normalize the life expectancy column to see clearer changes\n# 0.01 is added to avoid a minimum value of 0\ndf['life_expectancy_norm'] = 0.01 + (df['life_expectancy'] - df['life_expectancy'].min()) / (df['life_expectancy'].max() - df['life_expectancy'].min())\n\n# Create an animated scatter plot/bubble chart\nfig = px.scatter(\n    df,\n    x = \"under5_mortality\",\n    y = \"adolescent_fertility\",\n    title = \"Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time\",\n    size = 'life_expectancy_norm',\n    color = 'country',\n    color_discrete_map = {\n        'Brazil': '#1f77b4',\n        'India': '#ff7f0e',\n        'Kenya': 'green',\n        'United Kingdom': 'red',\n        'United States': '#9467bd'\n    },\n    hover_name = 'country',\n    size_max = 60,\n    animation_frame = 'year',\n    animation_group ='country',\n    labels={\n        \"under5_mortality\": \"Under-5 Mortality Rate\",\n        \"adolescent_fertility\": \"Adolescent Fertility Rate\",\n        \"life_expectancy_norm\": \"Life Expectancy (Normalized)\"\n    }\n)\n\nfig.show()\n\n\n                                                \nLife Expectancy, Adolescent Fertility, and Under-5 Mortality from 2000 - 2023"
+  },
+  {
+    "objectID": "data_analysis.html#life-expectancy",
+    "href": "data_analysis.html#life-expectancy",
+    "title": "Data Analysis",
+    "section": "Life Expectancy",
+    "text": "Life Expectancy\n\n\nCode\n# Life Expectancy Rate by Country Over Time\n\nplt.figure(figsize=(10, 6))\nsns.lineplot(\n    data=df,\n    x=\"year\",\n    y=\"life_expectancy\",\n    hue=\"country\",\n    marker=\"o\"\n)\n\nplt.title(\"Life Expectancy Over Time by Country\", fontsize=14)\nplt.xlabel(\"Year\")\nplt.ylabel(\"Life Expectancy (Years)\")\nplt.legend(title=\"Country\")\nplt.tight_layout()\nplt.show()\n\n\n\n\n\nLife Expectancy Rates from 2000 - 2023\n\n\n\n\n\n\nCode\n# Average Life Expectancy Rate by Country\n\navg_life_exp = df.groupby(\"country\")[\"life_expectancy\"].mean().reset_index()\n\nplt.figure(figsize=(8, 5))\nsns.barplot(data=avg_life_exp, x=\"country\", y=\"life_expectancy\")\nplt.title(\"Average Life Expectancy (2000–2023) by Country\")\nplt.ylabel(\"Average Life Expectancy (Years)\")\nplt.xlabel(\"Country\")\nplt.tight_layout()\nplt.show()\n\n\n\n\n\nAverage Life Expectancy Rates from 2000 - 2023\n\n\n\n\n\n\nCode\n# Average Life Expectancy by Country\n\ndf.groupby('country')['life_expectancy'].mean()\n\n\ncountry\nBrazil            73.437500\nIndia             67.453458\nKenya             60.534917\nUnited Kingdom    80.094104\nUnited States     77.931606\nName: life_expectancy, dtype: float64\nAverage Life Expectancy Rates from 2000 - 2023"
   }
 ]
