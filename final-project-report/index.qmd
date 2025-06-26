@@ -1,0 +1,10 @@
+---
+title: "Population Dynamics Report"
+author: "Alan Na (emory id) and Jennifer Gu (2606428)"
+---
+
+[Introduction]
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
