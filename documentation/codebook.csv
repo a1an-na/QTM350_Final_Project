@@ -1,7 +1,7 @@
-Variable,Type,Missing Values,Unique Values,Example Value
-country,object,0,5,Brazil
-year,int64,0,24,2000
-life_expectancy,float64,0,116,69.584
-under5_mortality,float64,0,100,34.5
-adolescent_fertility,float64,0,120,85.611
-secondary_school_enrollment,float64,42,78,94.3209762573242
+Variable,Description,Type,Missing Values,Unique Values,Mean,Standard Deviation,Minimum,Maximum
+country,Name of country,object,0,5,,,,
+year,Year of the observation,int64,0,24,2011.5,6.951210522714186,2000.0,2023.0
+life_expectancy,"Life expectancy, or the predicted number of years a newborn would live if current mortality rates continue to apply",float64,0,116,71.89031686991869,7.41765716938225,56.084,81.3691219512195
+under5_mortality,"Under-5 mortality rate, or the probability (per 1000 live births) that a child will die before reaching 5 years of age",float64,0,100,29.294166666666666,26.15971723896131,4.4,96.3
+adolescent_fertility,"Adolescent fertility rate, or the number of births per 1000 women from ages 15-19",float64,0,120,50.65313333333334,33.32389629633108,8.359,123.253
+secondary_school_enrollment,"Secondary school enrollment rate, or the ratio of total secondary school enrollment to the population of the secondary school age group",float64,42,78,85.51547775850058,24.536763664055265,40.3647918701172,128.755126953125
