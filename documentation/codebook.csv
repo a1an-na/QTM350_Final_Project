@@ -1,0 +1,7 @@
+Variable,Type,Missing Values,Unique Values,Example Value
+country,object,0,5,Brazil
+year,int64,0,24,2000
+life_expectancy,float64,0,116,69.584
+under5_mortality,float64,0,100,34.5
+adolescent_fertility,float64,0,120,85.611
+secondary_school_enrollment,float64,42,78,94.3209762573242
