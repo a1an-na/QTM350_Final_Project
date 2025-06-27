@@ -4,7 +4,7 @@ title: "Data Analysis"
 
 As stated in our introduction, our research question is: **How do population dynamics compare between countries of different income-levels?** To answer this question, we will examine three different indicators: life expectancy, adolescent fertility, and under-5 mortality rate.
 
-We'll be using the pandas, matplotlib, seaborn, and plotly libraries for our analysis.
+We'll be using the pandas, matplotlib, and seaborn libraries for our analysis.
 
 ```{python}
 #| echo: true
@@ -15,22 +15,21 @@ We'll be using the pandas, matplotlib, seaborn, and plotly libraries for our ana
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import plotly.express as px
 
 df = pd.read_csv('population_dynamics_clean.csv')
 ```
 
-Let's begin by analyzing a primary population dynamic indicator: life expectancy.
+# Life Expectancy Analysis
 
-## Life Expectancy Analysis
+We'll begin by looking at life expectancy over time by country. @fig-1 is a plot of life expectancy years from 2000 - 2023.
 
-We'll begin by looking at life expectancy over time by country. The following figure is a plot of life expectancy in years from 2000 - 2023.
+Based on the different lines, we see a generally increasing trend in life expectancy for all 5 countries. Additionally, there is a signficant dip in life expectancy for all countries around 2020-2021. This is likely an effect of the COVID-19 global pandemic. According to the [World Health Organization](https://www.who.int/news/item/24-05-2024-covid-19-eliminated-a-decade-of-progress-in-global-level-of-life-expectancy), global life expectancy deceased 1.8 years to 71.4 years from 2019 to 2021, which is similar to the life expectancy we saw in 2012. This, which we can see in @fig-1, is approximately true for our selection of countries.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Figure 1: Life Expectancy from 2000 - 2023"
+#| fig-cap: "Life Expectancy from 2000 - 2023"
 #| label: fig-1
 
 # Life Expectancy Rate by Country Over Time
@@ -52,60 +51,65 @@ plt.tight_layout()
 plt.show()
 ```
 
-Based on the different lines, we see a generally increasing trend in life expectancy for all 5 countries. Additionally, there is a signficant dip in life expectancy for all countries around 2019-2021. This is likely an effect of the COVID-19 global pandemic. According to the [World Health Organization](https://www.who.int/news/item/24-05-2024-covid-19-eliminated-a-decade-of-progress-in-global-level-of-life-expectancy), global life expectancy deceased 1.8 years to 71.4 years from 2019 to 2021, which is the life expectancy we saw in 2012. This, we can see from @fig-1, is approximately true for our selection of countries.
-
-While we see some general parallels, the life expectancy within these countries still vary drastically. @fig-2 depicts the selection of countries in order, from low-income, to lower-middle, upper-middle, and high. People in high income countries have higher life expectancies than those in low income countries. In other words, life expectancy seems to be positively correlated with a country's GNI.
-
+While we see some general parallels, the life expectancy within these countries still vary drastically. @fig-2 depicts the selection of countries in order, from low-income, to lower-middle, to upper-middle, and to high. The height of the bars represents average life expectancy from more recent years, 2017 - 2023. People in high income countries have higher life expectancies than those in low income countries. In other words, life expectancy seems to be positively linked with a country's GNI.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Figure 2: Average Life Expectancy from 2000 - 2023"
+#| fig-cap: "Average Life Expectancy from 2017 - 2023"
 #| label: fig-2
 
-# Average Life Expectancy Rate by Country
-
-avg_life_exp = df.groupby("country")["life_expectancy"].mean().reset_index()
+# Bar plot of average life expectancy per country
+avg_life_exp = (
+    df[df['year'].between(2017, 2023)]
+    .groupby("country")["life_expectancy"]
+    .mean()
+    .reset_index()
+)
 
 country_order = ['Afghanistan', 'Kenya', 'India', 'Brazil', 'United Kingdom']
 
 plt.figure(figsize=(8, 5))
 sns.barplot(data=avg_life_exp, x="country", y="life_expectancy", order=country_order)
-plt.title("Average Life Expectancy (2000–2023) by Country")
+plt.title("Average Life Expectancy (2017–2023) by Country")
 plt.ylabel("Average Life Expectancy (Years)")
 plt.xlabel("Country")
 plt.tight_layout()
 plt.show()
 ```
 
-A table of average life expectancies is also shown below:
+A table of these average life expectancies is also shown in @tbl-1. High-income countries, such as the United Kingdom, have generally higher life expectancy. The United Kingdom life expectancy hovers near the top edge of the plot in @fig-1, and in @tbl-1, we see that it has a high average life expectancy of around 81.0 years. However, for low-income countries, such as Afghanistan, we see a significantly lower life expectancy of around 63.0 years. Thus, again, there appears to be a rather strong correlation between a country's income level and their life expectancy.
+
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Table 1: Average Life Expectancy from 2000 - 2023"
+#| fig-cap: "Average Life Expectancy from 2017 - 2023"
 #| label: tbl-1
 
 # Average Life Expectancy by Country
 
-table_1= df.groupby('country', as_index=False)['life_expectancy'].mean().round(3)
-table_1.columns = ['Country', 'Average Life Expectancy']
+table_1 = (
+    df[df['year'].between(2017, 2023)]
+    .groupby('country', as_index=False)['life_expectancy']
+    .mean()
+    .round(3)
+)
+table_1.columns = ['Country', 'Average Life Expectancy (2017–2023)']
 table_1
 ```
 
- A high-income country, such as the United Kingdom, is shown to have generally higher life expectancy. In @fig-1, the United Kingdom life expectancy hovers near the top edge of the plot, and in @tbl-1, we see that it has a high average life expectancy of around 80 years. However, for low-income countries, such as Afghanistan, we see a significantly lower life expectancy of around 60 years. Thus, there appears to be a rather strong correlation between a country's income level and their life expectancy.
+# Adolescent Fertility Analysis
 
-## Adolescent Fertility Analysis
-
-Our second indicator for population dynamics is adolescent fertility rate. @fig-3 shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases, for lower and lower-middle countries, such as India. Notably, India had high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a low adolescent fertility rate, one similar to that of the United Kingdom. India's improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya,and Brazil) demonstrates a level of global improvement on this indicator.
+Our second indicator for population dynamics is adolescent fertility rate. @fig-3 shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases for lower and lower-middle countries, such as India. Notably, India has high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a low adolescent fertility rate, one similar to that of the United Kingdom. India's improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya, and Brazil) demonstrates a level of global improvement on this indicator.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Figure 3: Adolescent Fertility Rates from 2000 - 2023"
+#| fig-cap: "Adolescent Fertility Rates from 2000 - 2023"
 #| label: fig-3
 
 # Adolescent Fertility Rate by Country Over Time
@@ -125,31 +129,46 @@ plt.tight_layout()
 plt.show()
 ```
 
-Still, as shown in @tbl-2, there are still signficantly wide gaps in adolescent fertility rates between lower- and higher-income countries. The United Kingdom has an average rate of approximately 19, whereas Afghanistan has a rate of around 102. This is a drastic difference, and one that still needs contionous attention and amendment.
+## Adolescent Fertility and Secondary School Enrollment
+
+Still, as shown in @tbl-2, there are signficantly wide gaps in adolescent fertility rates between lower- and higher-income countries. The United Kingdom has an average rate of approximately 10.1, whereas Afghanistan has a rate of around 70. This is a drastic difference, and one that still needs contionous attention and amendment.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Table 2: Average Adolescent Fertility Rates from 2000 - 2023"
+#| fig-cap: "Average Adolescent Fertility Rates from 2017 - 2023"
 #| label: tbl-2
 
 # Average Adolescent Fertility Rate by Country
 
-table_2= df.groupby('country', as_index=False)['adolescent_fertility'].mean().round(3)
-table_2.columns = ['Country', 'Average Adolescent Fertility']
+table_2 = (
+    df[df['year'].between(2017, 2023)]
+    .groupby('country', as_index=False)['adolescent_fertility']
+    .mean()
+    .round(3)
+)
+table_2.columns = ['Country', 'Average Adolescent Fertility (2017–2023)']
 table_2
 ```
 
 In addition to looking at adolescent fertility rates over time, we will examine how these rates interact with secondary school enrollment.
 
-Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around ages 14 -18.
+Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around the 14 - 18 age range. Education can  better knowledge of reproductive health and the importance of contraception, and empower women to focus on their academics and career, which may delay child marriage. So, we will observe how education (secondary school enrollment, in particular) interacts with adolescent fertility rates in different countries.
+
+In addition, it's important to note that a country's access to education generally correlates with their GNI, as more money can be invested in schools and teachers. On the other hand, greater access to education is known to improve a country's economy as well, by increasing human capital and innovation.
+
+@fig-4 shows the adolescent fertility and secondary-school-enrollment rates over time. We chose the countries of India and the United Kingdom based on their income-level designations (lower-middle and high, respectively) as well as their availablity of secondary-school-enrollment data compared to other countries.
+
+For India, as secondary school enrollment steadily increases, the adolescent fertility rate decreases quite drastically, suggesting an inverse correlation between these two variables. For the United Kingdom,
+we see an increase in enrollment rates through the years, as well as a slight decrease in adolescent fertility, reflecting said inverse correlation. Additionally, enrollment rates have been relatively high and adolescent fertility rates low from 2000 - 2023, further emphasizing this inverse correlation. Considering both countries' plots, increasing secondary school enrollment is likely highly associated with decreasing adolescent fertility rates.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Figure 4: Adolescent Fertility and Secondary School Enrollment Rates: India and United Kingdom"
+#| fig-cap: "Adolescent Fertility and Secondary School Enrollment Rates: India and United Kingdom"
+#| label: fig-4
 
 # Adolescent Fertility Rate and Secondary School Enrollment
 
@@ -206,13 +225,16 @@ plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.show()
 ```
 
-## Under-5 Mortality Rate Analysis
+# Under-5 Mortality Rate Analysis
+
+Our final indicator is under-5 mortality rate. @fig-5 shows the under-5 mortality rate for our selected countries over time. We see a general decrease in mortality rate for all countries, demonstrating that we're improving this indicator on a global level.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Figure 5: Under-5 Mortality Rates from 2000 - 2023"
+#| fig-cap: "Under-5 Mortality Rates from 2000 - 2023"
+#| label: fig-5
 
 #Under 5 Mortality Rate by Country Over Time
 
@@ -231,24 +253,37 @@ plt.tight_layout()
 plt.show()
 ```
 
+However, like previous indicators, there appears to be signficant differences in the mortality rate as shown in @tbl-3. Afghanistan, at the lowest income-level, has a very high under-5 mortality rate of 61.4. Kenya and India, both lower-middle income countries, have mortality rates of 42.7 and 32.7, respectively. We see more improvement as income-level increases. For Brazil, an upper-middle-income country, the under-5 mortality rate is 14.9, and for the United Kingdom, a high-income country, the rate is very low, at 4.4. A country's GNI, then, seems to have a strong bearing on their child mortality rate, which is generally similar to what we previously saw with GNI and adolescent fertility in @tbl-2.
+
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Table 3: Average Under-5 Mortality Rates from 2000 - 2023"
+#| fig-cap: "Average Under-5 Mortality Rates from 2017 - 2023"
+#| label: tbl-3
 
 # Average Under 5 Mortality Rate by Country
 
-table_3= df.groupby('country', as_index=False)['under5_mortality'].mean().round(3)
-table_3.columns = ['Country', 'Average Under-5 Mortality']
+table_3 = (
+    df[df['year'].between(2017, 2023)]
+    .groupby('country', as_index=False)['under5_mortality']
+    .mean()
+    .round(3)
+)
+table_3.columns = ['Country', 'Under-5 Mortality (2017–2023)']
 table_3
 ```
+
+## Under-5 Mortality and Adolescent Fertility
+
+In order to better understand the relationship between adolescent fertility and under-5 mortality, we plotted the two variables over time for two countries with very different income levels: Afghanistan and the United Kingdom. This is shown in @fig-6. Based on the parallel downward curves we see in both plots, especially that of Afghanistan, adolescent fertility and under-5 mortality are strongly linked. Additionally, we can clearly see the differences in both of these indicators for low- and high-income countries, as Afghanistan's rates from 2023 are still higher than those of the United Kingdom in 2000.
 
 ```{python}
 #| echo: true
 #| eval: true
 #| code-fold: true
-#| fig-cap: "Figure 6: Under-5 Mortality & Adolescent Fertility Rates: Afghanistan and United Kingdom"
+#| fig-cap: "Under-5 Mortality & Adolescent Fertility Rates: Afghanistan and United Kingdom"
+#| label: fig-6
 
 # Under 5 Mortality Rate and Adolescent Fertility Rate
 
@@ -306,43 +341,4 @@ plt.show()
 
 ```
 
-## Life Expectancy, Adolescent Fertility, and Under-5 Mortality
-
-```{python}
-#| echo: true
-#| eval: true
-#| code-fold: true
-#| fig-cap: "Figure 7: Life Expectancy, Adolescent Fertility, and Under-5 Mortality from 2000 - 2023"
-
-# Normalize the life expectancy column to see clearer changes
-# 0.01 is added to avoid a minimum value of 0
-df['life_expectancy_norm'] = 0.01 + (df['life_expectancy'] - df['life_expectancy'].min()) / (df['life_expectancy'].max() - df['life_expectancy'].min())
-
-# Create an animated scatter plot/bubble chart
-fig = px.scatter(
-    df,
-    x = "under5_mortality",
-    y = "adolescent_fertility",
-    title = "Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time",
-    size = 'life_expectancy_norm',
-    color = 'country',
-    color_discrete_map = {
-        'Brazil': '#ff7f0e',
-        'India': 'green',
-        'Kenya': 'red',
-        'United Kingdom': '#9467bd',
-        'Afghanistan': '#1f77b4'
-    },
-    hover_name = 'country',
-    size_max = 60,
-    animation_frame = 'year',
-    animation_group ='country',
-    labels={
-        "under5_mortality": "Under-5 Mortality Rate",
-        "adolescent_fertility": "Adolescent Fertility Rate",
-        "life_expectancy_norm": "Life Expectancy (Normalized)"
-    }
-)
-
-fig.show()
-```
+Now, we'll discuss our [results](results_discussion.qmd) in the next section.

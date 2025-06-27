@@ -1,18 +1,12 @@
 ---
-title: "Population Dynamics Report"
-author: "Alan Na (emory id) and Jennifer Gu (2606428)"
+title: "Population Dynamics Across Income Levels"
+author: "Alan Na (2588698) and Jennifer Gu (2606428)"
 ---
 
-[Introduction]
+Population dyamics is the study of how population characterstics change over time. Examples of these characteristics include birth and death rates, age distributions, and population size and density. Most importantly, population dynamics help us understand how and why populations evolve in structure and makeup, and allow us to consider how changes in populations interact with key components of human societies, such as economics, public health, and government.
 
-This is a Quarto website.
+This project aims to explore the population dynamics between five countires of ranging income values: Afghanistan, Kenya, India, Brazil, and the United Kingdom. Using data from the [World Bank Development Indicators (WDI)](https://databank.worldbank.org/source/world-development-indicators), we analyze three key indicators: life expectancy, adolescent fertility rate, and under-5 mortality rate from 2000 to 2023.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-
-This project aims to explore the population dynamic between five countires of ranging income values: Afghanistan, Kenya, India, Brazil, and the United Kingdom. Using data from the World Bank, we analyze three key indicators: life expectancy, under-5 mortality rate, and adolescent fertility rate from 2000 to 2023.
-
-Our primary research question is: How do population dynamics compare between countries of different income levels?
+The primary research question we focus on is: How do population dynamics compare between countries of different income levels?
 
 We find that higher-income countries tend to have higher life expectancy and lower mortality and fertility rates. While lower-income countries display the opposite trend, highlighting the strong connection between income level and population health outcome.
-
