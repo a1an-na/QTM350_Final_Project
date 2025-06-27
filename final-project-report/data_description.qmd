@@ -12,7 +12,9 @@ We focused specifically on three indicators ranging from 2000 to 2023. Below are
 
 We also included the secondary school enrollment indicator (SE.SEC.ENRR) to use for our analysis on adolescent fertility.
 
-The data was accessed via the wbdata Python package and cleaned using SQL. We filtered the data to include only the selected countries and relevant years. We reshaped the dataset from long to wide format, with each row representing a single country-year observation and separate columns for each indicator.
+The data was accessed via the wbdata Python package. First, we used Python to import the necessary packages and select our countries and indicators. Then, we extracted the year from the date column, and filtered the data to include only observations from the selected countries and relevant years.
+
+We used the duckdb package to create a view (wdi_raw) and query and transform data using SQL syntax within Python. Using SQL syntax, we selected the country, year, and indicator columns. We took the maximum of each indicator to avoid duplicates, and grouped and ordered by country and year to organize our data. We then returned this dataset as a Pandas dataframe before saving it as a csv file to our data folder.
 
 The final variables in our dataset are:
 
@@ -25,14 +27,6 @@ The final variables in our dataset are:
 
 
 Below are our summary statistics for our three primary indicators:
-
-We used the duckdb package to efficiently query and transform data using SQL syntax within Python. It was primarily used to:
-Create views for the cleaned dataset, Filter and reshape data,
-Aggregate indicators including life expectancy, under-5 mortality, and adolescent fertility.
-
-
-
-
 
 ### Average Life Expectancy by Country (2000–2023)
 

@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>As stated in our introduction, our research question is: <strong>How do population dynamics compare between countries of different income-levels?</strong> To answer this question, we will examine three different indicators: life expectancy, adolescent fertility, and under-5 mortality rate.</p>
 <p>We’ll be using the pandas, matplotlib, and seaborn libraries for our analysis.</p>
-<div id="7e9655b3" class="cell" data-execution_count="1">
+<div id="15394245" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import Libraries and Read Cleaned Dataset</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -357,7 +357,7 @@ Table&nbsp;1
 </section>
 <section id="adolescent-fertility-analysis" class="level1">
 <h1>Adolescent Fertility Analysis</h1>
-<p>Our second indicator for population dynamics is adolescent fertility rate. <a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a> shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases for lower and lower-middle countries, such as India. Notably, India has high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a low adolescent fertility rate, one similar to that of the United Kingdom. India’s improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya, and Brazil) demonstrates a level of global improvement on this indicator.</p>
+<p>Our second indicator for population dynamics is adolescent fertility rate. <a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a> shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases for lower and lower-middle countries, such as India. Notably, India had high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a much low adolescent fertility rate. India’s improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya, and Brazil) demonstrates a level of global improvement on this indicator.</p>
 <div id="cell-fig-3" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
@@ -462,8 +462,7 @@ Table&nbsp;2
 </div>
 </div>
 <p>In addition to looking at adolescent fertility rates over time, we will examine how these rates interact with secondary school enrollment.</p>
-<p>Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around the 14 - 18 age range. Education can better knowledge of reproductive health and the importance of contraception, and empower women to focus on their academics and career, which may delay child marriage. So, we will observe how education (secondary school enrollment, in particular) interacts with adolescent fertility rates in different countries.</p>
-<p>In addition, it’s important to note that a country’s access to education generally correlates with their GNI, as more money can be invested in schools and teachers. On the other hand, greater access to education is known to improve a country’s economy as well, by increasing human capital and innovation.</p>
+<p>Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around the 14 - 18 age range. Education can better students’ knowledge of reproductive health and the importance of contraception, and empower women to focus on their academics and career, which may delay child marriage. So, we will observe how education (secondary school enrollment, in particular) interacts with adolescent fertility rates in different countries.</p>
 <p><a href="#fig-4" class="quarto-xref">Figure&nbsp;4</a> shows the adolescent fertility and secondary-school-enrollment rates over time. We chose the countries of India and the United Kingdom based on their income-level designations (lower-middle and high, respectively) as well as their availablity of secondary-school-enrollment data compared to other countries.</p>
 <p>For India, as secondary school enrollment steadily increases, the adolescent fertility rate decreases quite drastically, suggesting an inverse correlation between these two variables. For the United Kingdom, we see an increase in enrollment rates through the years, as well as a slight decrease in adolescent fertility, reflecting said inverse correlation. Additionally, enrollment rates have been relatively high and adolescent fertility rates low from 2000 - 2023, further emphasizing this inverse correlation. Considering both countries’ plots, increasing secondary school enrollment is likely highly associated with decreasing adolescent fertility rates.</p>
 <div id="cell-fig-4" class="cell" data-execution_count="7">

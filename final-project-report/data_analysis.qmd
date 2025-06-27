@@ -103,7 +103,7 @@ table_1
 
 # Adolescent Fertility Analysis
 
-Our second indicator for population dynamics is adolescent fertility rate. @fig-3 shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases for lower and lower-middle countries, such as India. Notably, India has high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a low adolescent fertility rate, one similar to that of the United Kingdom. India's improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya, and Brazil) demonstrates a level of global improvement on this indicator.
+Our second indicator for population dynamics is adolescent fertility rate. @fig-3 shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases for lower and lower-middle countries, such as India. Notably, India had high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a much low adolescent fertility rate. India's improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya, and Brazil) demonstrates a level of global improvement on this indicator.
 
 ```{python}
 #| echo: true
@@ -154,9 +154,7 @@ table_2
 
 In addition to looking at adolescent fertility rates over time, we will examine how these rates interact with secondary school enrollment.
 
-Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around the 14 - 18 age range. Education can  better knowledge of reproductive health and the importance of contraception, and empower women to focus on their academics and career, which may delay child marriage. So, we will observe how education (secondary school enrollment, in particular) interacts with adolescent fertility rates in different countries.
-
-In addition, it's important to note that a country's access to education generally correlates with their GNI, as more money can be invested in schools and teachers. On the other hand, greater access to education is known to improve a country's economy as well, by increasing human capital and innovation.
+Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around the 14 - 18 age range. Education can  better students' knowledge of reproductive health and the importance of contraception, and empower women to focus on their academics and career, which may delay child marriage. So, we will observe how education (secondary school enrollment, in particular) interacts with adolescent fertility rates in different countries.
 
 @fig-4 shows the adolescent fertility and secondary-school-enrollment rates over time. We chose the countries of India and the United Kingdom based on their income-level designations (lower-middle and high, respectively) as well as their availablity of secondary-school-enrollment data compared to other countries.
 
