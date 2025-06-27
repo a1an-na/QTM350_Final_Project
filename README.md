@@ -5,7 +5,7 @@
 - Jennifer Gu (2606428)
 
 
-# Project Overview
+## Project Overview
 This project explores global population dynamics by analyzing three key health-related indicators from the World Bank's World Development Indicators (WDI) database across five countries with varying income levels:
 
 - Countries: Afghanistan, Kenya, India, Brazil, United Kingdom  
