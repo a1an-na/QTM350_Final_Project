@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data Description – Population Dynamics Report</title>
+<title>Data Description – Population Dynamics Across Income Levels</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Population Dynamics Report</span>
+    <span class="navbar-title">Population Dynamics Across Income Levels</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -165,7 +165,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Under-5 mortality rate (SH.DYN.MORT)</li>
 </ol>
 <p>We also included the secondary school enrollment indicator (SE.SEC.ENRR) to use for our analysis on adolescent fertility.</p>
-<p>The data was accessed via the wbdata Python package and cleaned using SQL. We filtered the data to include only the selected countries and relevant years. We reshaped the dataset from long to wide format, with each row representing a single country-year observation and separate columns for each indicator.</p>
+<p>The data was accessed via the wbdata Python package. First, we used Python to import the necessary packages and select our countries and indicators. Then, we extracted the year from the date column, and filtered the data to include only observations from the selected countries and relevant years.</p>
+<p>We used the duckdb package to create a view (wdi_raw) and query and transform data using SQL syntax within Python. Using SQL syntax, we selected the country, year, and indicator columns. We took the maximum of each indicator to avoid duplicates, and grouped and ordered by country and year to organize our data. We then returned this dataset as a Pandas dataframe before saving it as a csv file to our data folder.</p>
 <p>The final variables in our dataset are:</p>
 <ul>
 <li>country: country name (e.g., “India”)</li>

@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Population Dynamics Report"
+  title: "Population Dynamics Across Income Levels"
   navbar:
     left:
       - href: index.qmd
