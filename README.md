@@ -18,3 +18,16 @@ We compare these indicators over time (2000–2023) to evaluate how population h
 
 Research Question:
 **How do population dynamics compare between countries of different income levels?**
+
+
+This repository is organized into the following folders:
+
+data/ – Cleaned and raw datasets used for the analysis
+
+scripts/ – Python scripts for data cleaning, transformation, and visualizations
+
+documentation/ – Supporting documentation including codebooks and design notes
+
+final-project-report/ – Quarto files for the final report and presentation
+
+README.md – Overview of the project and structure
