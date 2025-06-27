@@ -33,5 +33,12 @@
     "title": "Data Analysis",
     "section": "Life Expectancy, Adolescent Fertility, and Under-5 Mortality",
     "text": "Life Expectancy, Adolescent Fertility, and Under-5 Mortality\n\n\nCode\n# Normalize the life expectancy column to see clearer changes\n# 0.01 is added to avoid a minimum value of 0\ndf['life_expectancy_norm'] = 0.01 + (df['life_expectancy'] - df['life_expectancy'].min()) / (df['life_expectancy'].max() - df['life_expectancy'].min())\n\n# Create an animated scatter plot/bubble chart\nfig = px.scatter(\n    df,\n    x = \"under5_mortality\",\n    y = \"adolescent_fertility\",\n    title = \"Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time\",\n    size = 'life_expectancy_norm',\n    color = 'country',\n    color_discrete_map = {\n        'Brazil': '#1f77b4',\n        'India': '#ff7f0e',\n        'Kenya': 'green',\n        'United Kingdom': 'red',\n        'United States': '#9467bd'\n    },\n    hover_name = 'country',\n    size_max = 60,\n    animation_frame = 'year',\n    animation_group ='country',\n    labels={\n        \"under5_mortality\": \"Under-5 Mortality Rate\",\n        \"adolescent_fertility\": \"Adolescent Fertility Rate\",\n        \"life_expectancy_norm\": \"Life Expectancy (Normalized)\"\n    }\n)\n\nfig.show()\n\n\n                                                \nLife Expectancy, Adolescent Fertility, and Under-5 Mortality from 2000 - 2023"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Population Dynamics Report",
+    "section": "",
+    "text": "[Introduction]\nThis is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]
