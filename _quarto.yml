@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Population Dynamics Across Income Levels"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: data_description.qmd
+        text: Data Description
+      - href: data_analysis.qmd
+        text: Data Analysis
+      - href: results_discussion.qmd
+        text: Results and Discussion
+      - href: conclusion_further_reading.qmd
+        text: Conclusion
+      - about.qmd
+
+format:
+  html:
+    theme:
+      - yeti
+      - brand
+    css: styles.css
+    toc: true
+  pdf: default
+
+
+

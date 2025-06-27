@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Results and Discussion – Population Dynamics Across Income Levels</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-cf3f2c26eef976f46b51aa29f3e196e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="text/javascript">
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+if (typeof require !== 'undefined') {
+require.undef("plotly");
+requirejs.config({
+    paths: {
+        'plotly': ['https://cdn.plot.ly/plotly-2.35.2.min']
+    }
+});
+require(['plotly'], function(Plotly) {
+    window._Plotly = Plotly;
+});
+}
+</script>
+
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Population Dynamics Across Income Levels</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_description.html"> 
+<span class="menu-text">Data Description</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data_analysis.html"> 
+<span class="menu-text">Data Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./results_discussion.html" aria-current="page"> 
+<span class="menu-text">Results and Discussion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./conclusion_further_reading.html"> 
+<span class="menu-text">Conclusion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#life-expectancy-adolescent-fertility-and-under-5-mortality-discussion" id="toc-life-expectancy-adolescent-fertility-and-under-5-mortality-discussion" class="nav-link active" data-scroll-target="#life-expectancy-adolescent-fertility-and-under-5-mortality-discussion">Life Expectancy, Adolescent Fertility, and Under-5 Mortality Discussion</a></li>
+  <li><a href="#sec-af-sse" id="toc-sec-af-sse" class="nav-link" data-scroll-target="#sec-af-sse">Adolscent Fertility and Secondary School Enrollment</a></li>
+  <li><a href="#under-5-mortality-and-adolescent-fertility" id="toc-under-5-mortality-and-adolescent-fertility" class="nav-link" data-scroll-target="#under-5-mortality-and-adolescent-fertility">Under-5 Mortality and Adolescent Fertility</a></li>
+  <li><a href="#sec-limitations" id="toc-sec-limitations" class="nav-link" data-scroll-target="#sec-limitations">Limitations</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="results_discussion.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Results and Discussion</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="life-expectancy-adolescent-fertility-and-under-5-mortality-discussion" class="level1">
+<h1>Life Expectancy, Adolescent Fertility, and Under-5 Mortality Discussion</h1>
+<p>To begin discussing results, we’ll start by reviewing all three indicators over time. The following is an interactive bubble chart with under-5 mortality rate on the x-axis, adolescent fertility rate on the y-axis, and life expectancy as bubble size. Each bubble represents a different country. (Note that life expectancy has been normalized in order to better visualize the change from 2000 - 2023. Also, 0.01 was added after this normalization in order to avoid a minimum of 0 years). Our goal in creating this bubble chart is to better visualize the trends and comparisons we discussed throughout our analysis.</p>
+<p>As we progress through time, we see the general trend of increasing life expectancy (the bubble grows larger) and decreasing adolescent fertility as well as under-5 mortality (the bubbles move toward the origin of the graph). This, we saw too in our analyses of our three indicators in the indicator-over-time plots in the <a href="./data_analysis.html">data analysis</a> section. Thus, <strong>we see a global improvement for all countries in terms of our indicators.</strong></p>
+<div id="491a575c" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We will use pandas and plotly for this figure.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> plotly.express <span class="im">as</span> px</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Read the dataset.</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'population_dynamics_clean.csv'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize the life expectancy column to see clearer changes</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 0.01 is added to avoid a minimum value of 0</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'life_expectancy_norm'</span>] <span class="op">=</span> <span class="fl">0.01</span> <span class="op">+</span> (df[<span class="st">'life_expectancy'</span>] <span class="op">-</span> df[<span class="st">'life_expectancy'</span>].<span class="bu">min</span>()) <span class="op">/</span> (df[<span class="st">'life_expectancy'</span>].<span class="bu">max</span>() <span class="op">-</span> df[<span class="st">'life_expectancy'</span>].<span class="bu">min</span>())</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create an animated scatter plot/bubble chart</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.scatter(</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    df,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> <span class="st">"under5_mortality"</span>,</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> <span class="st">"adolescent_fertility"</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    title <span class="op">=</span> <span class="st">"Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time"</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    size <span class="op">=</span> <span class="st">'life_expectancy_norm'</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    color <span class="op">=</span> <span class="st">'country'</span>,</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    color_discrete_map <span class="op">=</span> {</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Brazil'</span>: <span class="st">'#ff7f0e'</span>,</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        <span class="st">'India'</span>: <span class="st">'green'</span>,</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Kenya'</span>: <span class="st">'red'</span>,</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        <span class="st">'United Kingdom'</span>: <span class="st">'#9467bd'</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">'Afghanistan'</span>: <span class="st">'#1f77b4'</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    hover_name <span class="op">=</span> <span class="st">'country'</span>,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    size_max <span class="op">=</span> <span class="dv">60</span>,</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    animation_frame <span class="op">=</span> <span class="st">'year'</span>,</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    animation_group <span class="op">=</span><span class="st">'country'</span>,</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    labels<span class="op">=</span>{</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">"under5_mortality"</span>: <span class="st">"Under-5 Mortality Rate"</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">"adolescent_fertility"</span>: <span class="st">"Adolescent Fertility Rate"</span>,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">"life_expectancy_norm"</span>: <span class="st">"Life Expectancy (Normalized)"</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>                            <div id="ed6122cf-afb7-4b6c-a2ef-ec9e0e3093be" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("ed6122cf-afb7-4b6c-a2ef-ec9e0e3093be")) {                    Plotly.newPlot(                        "ed6122cf-afb7-4b6c-a2ef-ec9e0e3093be",                        [{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.01],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[131.7],"xaxis":"x","y":[154.31],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.5629863663570877],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[34.5],"xaxis":"x","y":[85.611],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.3037325208223669],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[91.6],"xaxis":"x","y":[114.352],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.05092683238214541],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[96.3],"xaxis":"x","y":[121.104],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.8724016933582156],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.5],"xaxis":"x","y":[28.732],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"Under-5 Mortality Rate"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"Adolescent Fertility Rate"}},"legend":{"title":{"text":"country"},"tracegroupgap":0,"itemsizing":"constant"},"title":{"text":"Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time"},"updatemenus":[{"buttons":[{"args":[null,{"frame":{"duration":500,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":500,"easing":"linear"}}],"label":"&#9654;","method":"animate"},{"args":[[null],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"&#9724;","method":"animate"}],"direction":"left","pad":{"r":10,"t":70},"showactive":false,"type":"buttons","x":0.1,"xanchor":"right","y":0,"yanchor":"top"}],"sliders":[{"active":0,"currentvalue":{"prefix":"year="},"len":0.9,"pad":{"b":10,"t":60},"steps":[{"args":[["2000"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2000","method":"animate"},{"args":[["2001"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2001","method":"animate"},{"args":[["2002"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2002","method":"animate"},{"args":[["2003"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2003","method":"animate"},{"args":[["2004"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2004","method":"animate"},{"args":[["2005"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2005","method":"animate"},{"args":[["2006"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2006","method":"animate"},{"args":[["2007"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2007","method":"animate"},{"args":[["2008"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2008","method":"animate"},{"args":[["2009"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2009","method":"animate"},{"args":[["2010"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2010","method":"animate"},{"args":[["2011"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2011","method":"animate"},{"args":[["2012"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2012","method":"animate"},{"args":[["2013"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2013","method":"animate"},{"args":[["2014"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2014","method":"animate"},{"args":[["2015"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2015","method":"animate"},{"args":[["2016"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2016","method":"animate"},{"args":[["2017"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2017","method":"animate"},{"args":[["2018"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2018","method":"animate"},{"args":[["2019"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2019","method":"animate"},{"args":[["2020"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2020","method":"animate"},{"args":[["2021"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2021","method":"animate"},{"args":[["2022"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2022","method":"animate"},{"args":[["2023"],{"frame":{"duration":0,"redraw":false},"mode":"immediate","fromcurrent":true,"transition":{"duration":0,"easing":"linear"}}],"label":"2023","method":"animate"}],"x":0.1,"xanchor":"left","y":0,"yanchor":"top"}]},                        {"responsive": true}                    ).then(function(){
+                            Plotly.addFrames('ed6122cf-afb7-4b6c-a2ef-ec9e0e3093be', [{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.01],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[131.7],"xaxis":"x","y":[154.31],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.5629863663570877],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[34.5],"xaxis":"x","y":[85.611],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.3037325208223669],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[91.6],"xaxis":"x","y":[114.352],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.05092683238214541],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[96.3],"xaxis":"x","y":[121.104],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2000\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.8724016933582156],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.5],"xaxis":"x","y":[28.732],"yaxis":"y","type":"scatter"}],"name":"2000"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2001\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.029192749940097844],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[127.4],"xaxis":"x","y":[152.471],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2001\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.578006779353686],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[32.2],"xaxis":"x","y":[84.155],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2001\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.3192460281850151],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[88.0],"xaxis":"x","y":[112.043],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2001\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.06674378243159342],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[91.6],"xaxis":"x","y":[123.253],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2001\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.881930533827848],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.4],"xaxis":"x","y":[27.051],"yaxis":"y","type":"scatter"}],"name":"2001"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2002\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.056275009736994744],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[123.1],"xaxis":"x","y":[150.161],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2002\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.5937857990672841],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[30.1],"xaxis":"x","y":[81.131],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2002\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.33786982308736296],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[84.5],"xaxis":"x","y":[105.119],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2002\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.07652980908089241],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[86.6],"xaxis":"x","y":[120.567],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2002\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.8876663407124806],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.3],"xaxis":"x","y":[26.242],"yaxis":"y","type":"scatter"}],"name":"2002"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2003\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.09215710745109061],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[118.7],"xaxis":"x","y":[143.75],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2003\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.612295802962082],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[28.1],"xaxis":"x","y":[78.025],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2003\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.354445379853811],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[81.1],"xaxis":"x","y":[97.366],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2003\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.09966731394938978],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[81.6],"xaxis":"x","y":[119.028],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2003\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.8991379544817458],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.3],"xaxis":"x","y":[26.859],"yaxis":"y","type":"scatter"}],"name":"2003"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2004\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.11639459205923798],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[114.2],"xaxis":"x","y":[136.93],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2004\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.6303885731625302],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[26.3],"xaxis":"x","y":[76.9],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2004\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.36954165352210916],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[77.7],"xaxis":"x","y":[83.5],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2004\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.12159104807068742],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[76.6],"xaxis":"x","y":[118.167],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2004\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9105170552367444],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.1],"xaxis":"x","y":[27.278],"yaxis":"y","type":"scatter"}],"name":"2004"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2005\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.13297014882568603],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[109.7],"xaxis":"x","y":[130.838],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2005\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.6482537613478777],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[24.6],"xaxis":"x","y":[75.968],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2005\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.38679995633385716],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[74.4],"xaxis":"x","y":[64.678],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2005\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.14294582715423484],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[71.5],"xaxis":"x","y":[115.294],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2005\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.921988669006014],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[6.0],"xaxis":"x","y":[26.542],"yaxis":"y","type":"scatter"}],"name":"2005"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2006\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.14457683159578463],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[105.1],"xaxis":"x","y":[121.635],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2006\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.6658534371822762],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[23.1],"xaxis":"x","y":[73.845],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2006\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.40326172209275574],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[71.1],"xaxis":"x","y":[55.76],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2006\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.16376958153588247],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[67.1],"xaxis":"x","y":[112.795],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2006\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9295747361760126],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[5.9],"xaxis":"x","y":[26.008],"yaxis":"y","type":"scatter"}],"name":"2006"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2007\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.15986275694333313],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[100.7],"xaxis":"x","y":[117.754],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2007\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.6823152029411742],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[21.7],"xaxis":"x","y":[71.698],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2007\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.4195717665082536],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[67.9],"xaxis":"x","y":[51.987],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2007\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.17696933841168094],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[63.2],"xaxis":"x","y":[113.472],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2007\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9371608033460119],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[5.8],"xaxis":"x","y":[25.276],"yaxis":"y","type":"scatter"}],"name":"2007"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2008\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.18838636950252974],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[96.3],"xaxis":"x","y":[118.979],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2008\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.6967666609000226],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[20.5],"xaxis":"x","y":[69.141],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2008\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.4364128356256518],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[64.6],"xaxis":"x","y":[54.289],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2008\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.19775516245747868],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[58.2],"xaxis":"x","y":[112.227],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2008\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9428966102306445],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[5.6],"xaxis":"x","y":[25.31],"yaxis":"y","type":"scatter"}],"name":"2008"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2009\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.2088687508615274],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[92.2],"xaxis":"x","y":[109.655],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2009\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7098905571041207],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[19.5],"xaxis":"x","y":[67.334],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2009\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.4535952777657],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[61.4],"xaxis":"x","y":[46.696],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2009\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.21778237978627638],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[55.4],"xaxis":"x","y":[110.195],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2009\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9600115178702763],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[5.4],"xaxis":"x","y":[24.826],"yaxis":"y","type":"scatter"}],"name":"2009"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2010\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.22608912333742548],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[88.3],"xaxis":"x","y":[105.648],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2010\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7221041252478195],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[18.6],"xaxis":"x","y":[65.474],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2010\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.47111909292839815],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[58.2],"xaxis":"x","y":[41.719],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2010\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.2341682848734746],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[53.5],"xaxis":"x","y":[108.691],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2010\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9733333919249081],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[5.2],"xaxis":"x","y":[23.648],"yaxis":"y","type":"scatter"}],"name":"2010"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2011\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.2468749473832232],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[84.6],"xaxis":"x","y":[101.659],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2011\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7322694552556184],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[17.9],"xaxis":"x","y":[64.773],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2011\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.48860497775524614],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[55.0],"xaxis":"x","y":[40.795],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2011\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.2481266484662731],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[52.2],"xaxis":"x","y":[104.615],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2011\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9941488201352721],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[5.0],"xaxis":"x","y":[21.728],"yaxis":"y","type":"scatter"}],"name":"2011"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2012\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.2652711602704711],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[81.2],"xaxis":"x","y":[95.245],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2012\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.743193391980417],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[17.2],"xaxis":"x","y":[64.285],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2012\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5057874198952937],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[52.0],"xaxis":"x","y":[39.533],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2012\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.2577609537721719],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[51.2],"xaxis":"x","y":[100.219],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2012\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9923910728641763],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.8],"xaxis":"x","y":[20.042],"yaxis":"y","type":"scatter"}],"name":"2012"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2013\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.28245360241051926],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[78.0],"xaxis":"x","y":[89.337],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2013\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7535863040033158],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[16.7],"xaxis":"x","y":[63.947],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2013\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.521831951959842],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[49.1],"xaxis":"x","y":[35.326],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2013\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.2650435782553711],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[50.0],"xaxis":"x","y":[95.576],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2013\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9961841064491757],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.6],"xaxis":"x","y":[17.494],"yaxis":"y","type":"scatter"}],"name":"2013"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2014\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.2851845865917188],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[75.1],"xaxis":"x","y":[84.069],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2014\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7617033958752149],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[16.3],"xaxis":"x","y":[63.365],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2014\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5382557873828904],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[46.3],"xaxis":"x","y":[28.806],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2014\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.2749433959122201],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[48.8],"xaxis":"x","y":[89.953],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2014\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[1.0075632072041742],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.5],"xaxis":"x","y":[15.803],"yaxis":"y","type":"scatter"}],"name":"2014"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2015\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.285563889950219],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[72.4],"xaxis":"x","y":[81.043],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2015\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7724376809207637],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[16.0],"xaxis":"x","y":[61.779],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2015\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5532003397077884],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[43.6],"xaxis":"x","y":[18.194],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2015\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.28590526297286895],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[47.4],"xaxis":"x","y":[81.864],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2015\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9943338461638095],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.5],"xaxis":"x","y":[14.712],"yaxis":"y","type":"scatter"}],"name":"2015"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2016\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.29982569622981725],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[70.0],"xaxis":"x","y":[78.13],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2016\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7714894225245141],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[16.8],"xaxis":"x","y":[58.372],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2016\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5677276583383372],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[41.1],"xaxis":"x","y":[14.535],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2016\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.29527405592781786],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[46.0],"xaxis":"x","y":[73.781],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2016\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[1.0019199133338081],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.4],"xaxis":"x","y":[13.952],"yaxis":"y","type":"scatter"}],"name":"2016"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2017\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.2907224156258182],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[67.6],"xaxis":"x","y":[75.3],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2017\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7829443839512126],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[15.4],"xaxis":"x","y":[56.558],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2017\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5813446489084854],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[38.7],"xaxis":"x","y":[15.166],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2017\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.3028221927619669],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[45.3],"xaxis":"x","y":[68.182],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2017\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[1.0057129469188082],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.4],"xaxis":"x","y":[12.978],"yaxis":"y","type":"scatter"}],"name":"2017"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2018\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.292125838052268],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[65.4],"xaxis":"x","y":[73.021],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2018\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7924269679137115],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[15.2],"xaxis":"x","y":[54.287],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2018\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5945064754484343],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[36.4],"xaxis":"x","y":[15.133],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2018\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.3066152263469666],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[44.3],"xaxis":"x","y":[66.659],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2018\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[1.0057129469188082],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.4],"xaxis":"x","y":[12.068],"yaxis":"y","type":"scatter"}],"name":"2018"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2019\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.31101514530556607],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[63.3],"xaxis":"x","y":[70.967],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2019\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7991027070233109],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[15.0],"xaxis":"x","y":[50.958],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2019\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.6070614166147824],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[34.3],"xaxis":"x","y":[14.796],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2019\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.310939284633866],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[43.3],"xaxis":"x","y":[63.656],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2019\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[1.01],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.4],"xaxis":"x","y":[11.064],"yaxis":"y","type":"scatter"}],"name":"2019"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2020\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.2546127358966223],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[61.3],"xaxis":"x","y":[68.877],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2020\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7496794794107665],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[14.9],"xaxis":"x","y":[47.46],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2020\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.5846825184632853],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[32.4],"xaxis":"x","y":[14.423],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2020\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.25999884358732156],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[42.8],"xaxis":"x","y":[59.38],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2020\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9706523647714156],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.4],"xaxis":"x","y":[9.701],"yaxis":"y","type":"scatter"}],"name":"2020"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2021\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.21527897762017684],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[59.3],"xaxis":"x","y":[66.599],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2021\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.6939977463829726],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[14.7],"xaxis":"x","y":[45.67],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2021\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.47567073323039727],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[30.6],"xaxis":"x","y":[14.289],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2021\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.24592668898697337],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[41.9],"xaxis":"x","y":[59.513],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2021\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9826216985574439],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.4],"xaxis":"x","y":[8.578],"yaxis":"y","type":"scatter"}],"name":"2021"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2022\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.4125167240401547],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[57.4],"xaxis":"x","y":[65.339],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2022\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.7635619823318649],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[14.6],"xaxis":"x","y":[42.881],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2022\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.6431710963439783],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[29.1],"xaxis":"x","y":[14.185],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2022\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.33407678950236336],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[41.1],"xaxis":"x","y":[57.272],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2022\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[0.9964246402862719],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.5],"xaxis":"x","y":[8.379],"yaxis":"y","type":"scatter"}],"name":"2022"},{"data":[{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Afghanistan\u003cbr\u003eyear=2023\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Afghanistan"],"ids":["Afghanistan"],"legendgroup":"Afghanistan","marker":{"color":"#1f77b4","size":[0.4283716044254526],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Afghanistan","orientation":"v","showlegend":true,"x":[55.5],"xaxis":"x","y":[64.068],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Brazil\u003cbr\u003eyear=2023\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Brazil"],"ids":["Brazil"],"legendgroup":"Brazil","marker":{"color":"#ff7f0e","size":[0.8005819901214607],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Brazil","orientation":"v","showlegend":true,"x":[14.4],"xaxis":"x","y":[42.686],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=India\u003cbr\u003eyear=2023\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["India"],"ids":["India"],"legendgroup":"India","marker":{"color":"green","size":[0.6547398487782272],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"India","orientation":"v","showlegend":true,"x":[27.7],"xaxis":"x","y":[14.06],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=Kenya\u003cbr\u003eyear=2023\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["Kenya"],"ids":["Kenya"],"legendgroup":"Kenya","marker":{"color":"red","size":[0.337756032079813],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"Kenya","orientation":"v","showlegend":true,"x":[39.9],"xaxis":"x","y":[56.313],"yaxis":"y","type":"scatter"},{"hovertemplate":"\u003cb\u003e%{hovertext}\u003c\u002fb\u003e\u003cbr\u003e\u003cbr\u003ecountry=United Kingdom\u003cbr\u003eyear=2023\u003cbr\u003eUnder-5 Mortality Rate=%{x}\u003cbr\u003eAdolescent Fertility Rate=%{y}\u003cbr\u003eLife Expectancy (Normalized)=%{marker.size}\u003cextra\u003e\u003c\u002fextra\u003e","hovertext":["United Kingdom"],"ids":["United Kingdom"],"legendgroup":"United Kingdom","marker":{"color":"#9467bd","size":[1.0050302008735081],"sizemode":"area","sizeref":0.00028055555555555554,"symbol":"circle"},"mode":"markers","name":"United Kingdom","orientation":"v","showlegend":true,"x":[4.5],"xaxis":"x","y":[8.359],"yaxis":"y","type":"scatter"}],"name":"2023"}]);
+                        }).then(function(){
+                            
+var gd = document.getElementById('ed6122cf-afb7-4b6c-a2ef-ec9e0e3093be');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<p>Additionally, in our analysis, we looked at the averages of our indicators from 2017 to 2023, and noticed that a country’s income-level is closely associated with its average indicator value. That is, <strong>even though there have been overall improvements over time, lower life expectancy, higher adolescent fertility rates, and higher under-5 mortality rates are still closely associated with lower-income countries.</strong></p>
+<p>Further, if we pause the bubble chart on 2023, we can see that the countries, while having improved quite a lot since 2000, still appear in order of income level on the x- and y-axes (all except for India’s adolescent fertility rate, which is discussed below in <a href="#sec-limitations" class="quarto-xref">Section&nbsp;4</a>). In 2023, Afghanistan still hasn’t reached an under-5 mortality rate lower than that of Brazil’s in 2000, and Kenya has only made small improvements to life expectancy compared to other countries. <strong>Although there has been improvement, a lot of this improvement has been slow and difficult; while high-income countries have consistently strong indicator levels, countries of lower incomes not only face weaker indicator levels, but also greater hardship in breaking existing structures and reaching the ideal.</strong></p>
+</section>
+<section id="sec-af-sse" class="level1">
+<h1>Adolscent Fertility and Secondary School Enrollment</h1>
+<p>We also analyzed adolescent fertility and secondary school enrollment. As mentioned in our analysis, we selected India and the United Kingdom based on their income category designations. This is because a country’s access to education generally correlates with their GNI, as more money can be invested in schools and teachers. On the other hand, greater access to education is known to improve a country’s economy as well, by increasing human capital and innovation.</p>
+<p>We found that <strong>secondary school enrollment and adolescent fertility are inversely correlated.</strong> As the former increases, the latter decreases. Access to education can potentially lead to lower adolescent fertility rates, but this is only possible through a high income level.</p>
+</section>
+<section id="under-5-mortality-and-adolescent-fertility" class="level1">
+<h1>Under-5 Mortality and Adolescent Fertility</h1>
+<p>Finally, we found a <strong>strong positive correlation between under-5 mortality and adolescent fertility.</strong></p>
+<p>Intuitively, the strong positive correlation we found makes sense, as adolescent fertility is associated with complications during childbirth, and adolescents tend to be less suitable caretakers due to a lack of money and resources. Complications during childbirth as well as inefficient infant care can lead to child mortality. Thus, seeing a decrease in adolescent fertility would also likely come with a decrease in under-5 mortality.</p>
+<p>But we may also consider this correlation from an economic perspective. Lower-income countries may not have the money to provide good reproductive healthcare and suitable nutrition for infants and children, or the resources to build good education systems to discourage adolescent fertility.</p>
+</section>
+<section id="sec-limitations" class="level1">
+<h1>Limitations</h1>
+<p>There are several limitations of this report that we will point out.</p>
+<p>First, is India’s adolescent-fertility rate improvement. In Figure 3 on the <a href="./data_analysis.html">Data Analysis page</a>, India reaches an adolescent fertility rate comparable to that of the United Kingdom by 2023. This may be due to their increasing secondary-school enrollment rates, as discussed in <a href="#sec-af-sse" class="quarto-xref">Section&nbsp;2</a>. Other variables, such as access to contraceptives, may have an affect as well, and could be studied through additional research. However, there may also be potential limitations to data collection in countries with lower income, such as India. If less information is collected on the adolescent fertility rate, there may be potential innaccuracies in the data to keep in consideration.</p>
+<p>Additionally, this report considered a wide variety of countries. These countries vary not only in income level, but also in infrastructure, systems of government, culture, stigmas, and more, which are beyond the scope of this study. While income level plays a role in a country’s population dynamics, so too do many other factors that may be considered for further research opportunities.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

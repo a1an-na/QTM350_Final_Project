@@ -1,0 +1,27 @@
+---
+title: "Conclusion and Further Reading"
+---
+
+# Conclusion
+
+Our key findings from our anlysis are as follows:
+
+1. There have been overall improvements in life expectancy, adolescent fertility, and under-5 mortality since 2000.
+2. While these improvements exist, there are still significant gaps in population health between countries of high- and low-income. These gaps signify a relationship between income level and our indicators. Specifically, life expectancy is positively correlated with income level, and adolescent fertility and under-5 mortality are inversely correlated with income level.
+3. There is a strong inverse relationship between adolescent fertility and secondary school enrollment.
+4. There is a strong positive relationship between under-5 mortality and adolescent fertility.
+
+Our analysis reveals a distinct relationship between a country's income level and its population health indicators. High-income countries such as the United Kingdom tend to have higher life expectancy and lower under-5 mortality and adolescent fertility rates. Low and lower-middle-income countries such as Afghanistan and Kenya show the opposite trends. While there have been improvements to all of the selected countries over time, such disparities highlight the importance of investment in education and healthcare to improve population outcomes.
+
+Further, our analysis only focused on five countries. Future work could expand the dataset to include more countries and explore regional trends or changes before and after major global events (e.g., COVID-19). Additionally, incorporating other relevant variables, such as healthcare spending, education levels, or urbanization, could further a more comprehensive understanding of the drivers behind population health.
+
+# Further Reading
+- [World Bank](https://www.worldbank.org/ext/en/home)
+- [World Bank Adolescent Fertility](https://data.worldbank.org/indicator/SP.ADO.TFRT)
+- [World Bank API Documentation](https://documents.worldbank.org/en/publication/documents-reports/api)
+- [World Bank Classification of the World by Income and Region](https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html)
+- [World Bank Development Indicators](https://databank.worldbank.org/source/world-development-indicators)
+- [World Bank Life Expectancy At Birth](https://data.worldbank.org/indicator/SP.DYN.LE00.IN)
+- [World Bank Secondary School Enrollment](https://data.worldbank.org/indicator/SE.SEC.ENRR)
+- [World Bank Under-5 Mortality](https://data.worldbank.org/indicator/SH.DYN.MORT)
+- [World Health Organization on COVID-19 and Global Life Expectancy](https://www.who.int/news/item/24-05-2024-covid-19-eliminated-a-decade-of-progress-in-global-level-of-life-expectancy)
