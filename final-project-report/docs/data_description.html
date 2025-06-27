@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c1fac2584b48ed01fb6e278e36375074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-cf3f2c26eef976f46b51aa29f3e196e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -125,8 +125,16 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="data_description.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#average-life-expectancy-by-country-20002023" id="toc-average-life-expectancy-by-country-20002023" class="nav-link active" data-scroll-target="#average-life-expectancy-by-country-20002023">Average Life Expectancy by Country (2000–2023)</a></li>
+  <li><a href="#under-5-mortality-rate-by-country-20002023" id="toc-under-5-mortality-rate-by-country-20002023" class="nav-link" data-scroll-target="#under-5-mortality-rate-by-country-20002023">Under-5 Mortality Rate by Country (2000–2023)</a></li>
+  <li><a href="#adolescent-fertility-rate-by-country-20002023" id="toc-adolescent-fertility-rate-by-country-20002023" class="nav-link" data-scroll-target="#adolescent-fertility-rate-by-country-20002023">Adolescent Fertility Rate by Country (2000–2023)</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="data_description.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -149,8 +157,180 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>We used data from the <a href="https://databank.worldbank.org/source/world-development-indicators">World Bank’s World Development Indicators (WDI)</a> to examine population dynamics across five countries: Afghanistan, Kenya, India, Brazil, and the United Kingdom. These countries were selected to represent income levels ranging from low-income to high-income, based on the <a href="https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html">World Bank’s Classification of the world by income and region</a>. Specifically, Afghanistan is low-income, Kenya and India and lower-middle income, Brazil is upper-middle income, and the United Kingdom is classified as high-income. This allows for meaningful comparisons across development contexts.</p>
+<p>We focused specifically on three indicators ranging from 2000 to 2023. Below are the indicators and their unique WDI codes:</p>
+<ol type="1">
+<li>Life expectancy at birth (SP.DYN.LE00.IN)</li>
+<li>Adolescent fertility rate (SP.ADO.TFRT)</li>
+<li>Under-5 mortality rate (SH.DYN.MORT)</li>
+</ol>
+<p>We also included the secondary school enrollment indicator (SE.SEC.ENRR) to use for our analysis on adolescent fertility.</p>
+<p>The data was accessed via the wbdata Python package and cleaned using SQL. We filtered the data to include only the selected countries and relevant years. We reshaped the dataset from long to wide format, with each row representing a single country-year observation and separate columns for each indicator.</p>
+<p>The final variables in our dataset are:</p>
+<ul>
+<li>country: country name (e.g., “India”)</li>
+<li>year: year of observation (2000–2023)</li>
+<li>life_expectancy: average years at birth</li>
+<li>adolescent_fertility: births per 1,000 women aged 15–19</li>
+<li>under5_mortality: deaths per 1,000 live births</li>
+<li>secondary_school_enrollment: ratio of students enrolled in secondary school to the population of the age group</li>
+</ul>
+<p>Below are our summary statistics for our three primary indicators:</p>
+<section id="average-life-expectancy-by-country-20002023" class="level3">
+<h3 class="anchored" data-anchor-id="average-life-expectancy-by-country-20002023">Average Life Expectancy by Country (2000–2023)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Mean</th>
+<th>Min</th>
+<th>Median</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>80.09</td>
+<td>77.74</td>
+<td>80.52</td>
+<td>81.37</td>
+</tr>
+<tr class="even">
+<td>Brazil</td>
+<td>73.44</td>
+<td>69.58</td>
+<td>73.91</td>
+<td>75.85</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>67.45</td>
+<td>62.75</td>
+<td>67.45</td>
+<td>72.00</td>
+</tr>
+<tr class="even">
+<td>Kenya</td>
+<td>60.53</td>
+<td>56.08</td>
+<td>61.25</td>
+<td>63.65</td>
+</tr>
+<tr class="odd">
+<td>Afghanistan</td>
+<td>60.49</td>
+<td>55.00</td>
+<td>60.98</td>
+<td>66.04</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="under-5-mortality-rate-by-country-20002023" class="level3">
+<h3 class="anchored" data-anchor-id="under-5-mortality-rate-by-country-20002023">Under-5 Mortality Rate by Country (2000–2023)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Mean</th>
+<th>Min</th>
+<th>Median</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>5.18</td>
+<td>4.40</td>
+<td>4.90</td>
+<td>6.50</td>
+</tr>
+<tr class="even">
+<td>Brazil</td>
+<td>20.18</td>
+<td>14.40</td>
+<td>17.55</td>
+<td>34.50</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>55.70</td>
+<td>27.70</td>
+<td>53.50</td>
+<td>91.60</td>
+</tr>
+<tr class="even">
+<td>Kenya</td>
+<td>58.16</td>
+<td>39.90</td>
+<td>51.70</td>
+<td>96.30</td>
+</tr>
+<tr class="odd">
+<td>Afghanistan</td>
+<td>87.44</td>
+<td>55.50</td>
+<td>82.90</td>
+<td>131.70</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adolescent-fertility-rate-by-country-20002023" class="level3">
+<h3 class="anchored" data-anchor-id="adolescent-fertility-rate-by-country-20002023">Adolescent Fertility Rate by Country (2000–2023)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Mean</th>
+<th>Min</th>
+<th>Median</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>19.28</td>
+<td>8.36</td>
+<td>20.88</td>
+<td>28.73</td>
+</tr>
+<tr class="even">
+<td>India</td>
+<td>46.11</td>
+<td>14.06</td>
+<td>40.16</td>
+<td>114.35</td>
+</tr>
+<tr class="odd">
+<td>Brazil</td>
+<td>64.43</td>
+<td>42.69</td>
+<td>64.53</td>
+<td>85.61</td>
+</tr>
+<tr class="even">
+<td>Kenya</td>
+<td>93.82</td>
+<td>56.31</td>
+<td>102.42</td>
+<td>123.25</td>
+</tr>
+<tr class="odd">
+<td>Afghanistan</td>
+<td>102.32</td>
+<td>64.07</td>
+<td>98.45</td>
+<td>154.31</td>
+</tr>
+</tbody>
+</table>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
