@@ -1,5 +1,5 @@
 ---
-title: "Population Dynamics Report"
+title: "Population Dynamics Across Income Levels"
 author: "Alan Na (2588698) and Jennifer Gu (2606428)"
 ---
 
