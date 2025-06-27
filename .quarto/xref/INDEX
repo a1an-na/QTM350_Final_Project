@@ -1,0 +1,90 @@
+{
+  "conclusion_further_reading.qmd": {
+    "conclusion_further_reading.html": "37f8bf5d",
+    "conclusion_further_reading.tex": "69df3fb0"
+  },
+  "data_description.qmd": {
+    "data_description.html": "8b294f9b",
+    "data_description.tex": "e2ecbaa6"
+  },
+  "index.qmd": {
+    "index.html": "bb5982be",
+    "index.tex": "c59c84db"
+  },
+  "about.qmd": {
+    "about.html": "9375e08f",
+    "about.tex": "e964b421"
+  },
+  "results_discussion.qmd": {
+    "results_discussion.html": "b9014f9b",
+    "results_discussion.tex": "a0e9b6a9"
+  },
+  "data_analysis.qmd": {
+    "data_analysis.html": "4c7f6817",
+    "data_analysis.tex": "de116ae9"
+  },
+  "QTM350_Final_Project/figures/figures.ipynb": {
+    "figures.html": "efdadc70",
+    "figures.tex": "5b9aa39b"
+  },
+  "QTM350_Final_Project/scripts/QTM350_Final_Project_Cleaning.ipynb": {
+    "QTM350_Final_Project_Cleaning.html": "2dcb71f2",
+    "QTM350_Final_Project_Cleaning.tex": "ad32ec39"
+  },
+  "QTM350_Final_Project/scripts/under5_mortality.ipynb": {
+    "under5_mortality.html": "4e09694a",
+    "under5_mortality.tex": "85cd190d"
+  },
+  "QTM350_Final_Project/scripts/interactive_plot.ipynb": {
+    "interactive_plot.html": "311fc2f4",
+    "interactive_plot.tex": "8e8d031f"
+  },
+  "QTM350_Final_Project/scripts/life_expectancy.ipynb": {
+    "life_expectancy.html": "4895c3bb",
+    "life_expectancy.tex": "88afa657"
+  },
+  "QTM350_Final_Project/scripts/codebook_script.ipynb": {
+    "codebook_script.html": "815da81a",
+    "codebook_script.tex": "5e91fffc"
+  },
+  "QTM350_Final_Project/scripts/adolescent_fertility.ipynb": {
+    "adolescent_fertility.html": "b3da5916",
+    "adolescent_fertility.tex": "97fc6f30"
+  },
+  "QTM350_Final_Project/scripts/Descriptive_Statistics.ipynb": {
+    "Descriptive_Statistics.html": "c76e9c1a",
+    "Descriptive_Statistics.tex": "1fd0886f"
+  },
+  "figures/figures.ipynb": {
+    "figures.html": "0982733d",
+    "figures.tex": "d8085c01"
+  },
+  "scripts/QTM350_Final_Project_Cleaning.ipynb": {
+    "QTM350_Final_Project_Cleaning.html": "4ebd7307",
+    "QTM350_Final_Project_Cleaning.tex": "d8b0afae"
+  },
+  "scripts/under5_mortality.ipynb": {
+    "under5_mortality.html": "1778aab4",
+    "under5_mortality.tex": "488c1e25"
+  },
+  "scripts/interactive_plot.ipynb": {
+    "interactive_plot.html": "e3b9016a",
+    "interactive_plot.tex": "e99a49d6"
+  },
+  "scripts/life_expectancy.ipynb": {
+    "life_expectancy.html": "0f2f8f60",
+    "life_expectancy.tex": "efd2d6f3"
+  },
+  "scripts/codebook_script.ipynb": {
+    "codebook_script.html": "238e9baa",
+    "codebook_script.tex": "7502f5d6"
+  },
+  "scripts/adolescent_fertility.ipynb": {
+    "adolescent_fertility.html": "4f7f069f",
+    "adolescent_fertility.tex": "c7089da3"
+  },
+  "scripts/Descriptive_Statistics.ipynb": {
+    "Descriptive_Statistics.html": "f7ceb640",
+    "Descriptive_Statistics.tex": "28e7cf70"
+  }
+}

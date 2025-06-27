@@ -18,7 +18,7 @@ import pandas as pd
 import plotly.express as px
 
 # Read the dataset.
-df = pd.read_csv('population_dynamics_clean.csv')
+df = pd.read_csv('data/population_dynamics_clean.csv')
 
 # Normalize the life expectancy column to see clearer changes
 # 0.01 is added to avoid a minimum value of 0
