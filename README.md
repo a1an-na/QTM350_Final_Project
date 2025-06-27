@@ -22,12 +22,12 @@ Research Question:
 
 This repository is organized into the following folders:
 
-data/ – Cleaned and raw datasets used for the analysis
+data – Cleaned and raw datasets used for the analysis
 
-scripts/ – Python scripts for data cleaning, transformation, and visualizations
+scripts – Python scripts for data cleaning, transformation, and visualizations
 
-documentation/ – Supporting documentation including codebooks and design notes
+documentation – Supporting documentation including codebooks and design notes
 
-final-project-report/ – Quarto files for the final report and presentation
+final-project-report – Quarto files for the final report and presentation
 
 README.md – Overview of the project and structure
