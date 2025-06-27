@@ -2,6 +2,71 @@
 title: "Results and Discussion"
 ---
 
+# Life Expectancy, Adolescent Fertility, and Under-5 Mortality
+
+Finally, we will look at the interactions between all three of our indicators for our selection of countries over time. The following is an interactive bubble chart with under-5 mortality rate on the x-axis, adolescent fertility rate on the y-axis, and life expectancy as bubble size. Note that life expectancy has been normalized in order to better visualize the change from 2000 - 2023. Also, 0.01 was added to this normalization of life expectancy in order to avoid a minimum of 0 years. Our goal in creating this bubble chart is to better visualize the trends and comparisons we discussed throughout our analysis.
+
+As we progress through time, we see the general trend of increasing life expectancy (the bubble grow larger) and decreasing adolescent fertility as well as under-5 mortality (the bubbles move toward the origin of the graph). This reflects a global improvement for all countries, particularly those of non-high income levels. The comparitively lower levels of change for Brazil and especially the United Kingdom are due to their relatively stronger population dyamics throughout 2000 - 2023, which is depicted through its close proximity to the origin.
+
+Additionally, we also see all the bubbles shrink in 2020 and 2021, and grow back afterward, indicating the affect of the COVID-19 pandemic.
+
+Finally, if we pause on 2023, we can see that the countries, while having improved quite a lot since 2000, still appear in order of income level. Afghanistan still hasn't reached an under-5 mortality rate lower than that of Brazil's in 2000, and Kenya has only made small improvements to life expectancy compared to other countries. While high-income countries have continuously high life expectancies and lower adolescent fertility and under-5 mortality rates, countries of lower income levels not only face weaker indicators, but it's also more difficult for them to break existing structures and reach the ideal.
+
+```{python}
+#| echo: true
+#| eval: true
+#| code-fold: true
+#| fig-cap: "Life Expectancy, Adolescent Fertility, and Under-5 Mortality from 2000 - 2023"
+#| label: fig-2.1
+
+# We will use pandas and plotly for this figure.
+import pandas as pd
+import plotly.express as px
+
+# Read the dataset.
+df = pd.read_csv('population_dynamics_clean.csv')
+
+# Normalize the life expectancy column to see clearer changes
+# 0.01 is added to avoid a minimum value of 0
+df['life_expectancy_norm'] = 0.01 + (df['life_expectancy'] - df['life_expectancy'].min()) / (df['life_expectancy'].max() - df['life_expectancy'].min())
+
+# Create an animated scatter plot/bubble chart
+fig = px.scatter(
+    df,
+    x = "under5_mortality",
+    y = "adolescent_fertility",
+    title = "Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time",
+    size = 'life_expectancy_norm',
+    color = 'country',
+    color_discrete_map = {
+        'Brazil': '#ff7f0e',
+        'India': 'green',
+        'Kenya': 'red',
+        'United Kingdom': '#9467bd',
+        'Afghanistan': '#1f77b4'
+    },
+    hover_name = 'country',
+    size_max = 60,
+    animation_frame = 'year',
+    animation_group ='country',
+    labels={
+        "under5_mortality": "Under-5 Mortality Rate",
+        "adolescent_fertility": "Adolescent Fertility Rate",
+        "life_expectancy_norm": "Life Expectancy (Normalized)"
+    }
+)
+
+fig.show()
+```
+
+# Under-5 Mortality and Adolescent Fertility
+
+Intuitively, this makes sense, as adolescent fertility is associated with complications during childbirth. Adolescents, too, tend to be less suitable caretakers due to a lack of money and resources. Complications during childbirth as well as inefficient infant care can lead to child mortality. Thus, seeing a decrease in adolescent fertility would also likely come with a decrease in under-5 mortality.
+
+[Consider income-related effects]
+
 # Limitations
+
+Why does India have very low average adolescent fertility rate (much lower than Brazil, closer to the UK)?
 
 However, while India has reached an adolescent fertility rate comparable to that of the United Kingdom, it's enrollment rate is still relatively lower. Other variables, such as marital age and access to contraceptives, may have an affect as well. In addition, there could also be limitations to data collection in countries with lower income; if less information is collected on the adolescent fertility rate, there may be potential innaccuracies.
