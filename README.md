@@ -6,7 +6,7 @@ Group Members:
 
 This project explores global population dynamics by analyzing three key health-related indicators from the World Bank's World Development Indicators (WDI) database across five countries with varying income levels:
 
-- Countries:Afghanistan, Kenya, India, Brazil, United Kingdom  
+- Countries: Afghanistan, Kenya, India, Brazil, United Kingdom  
 - Indicators:
   - Life Expectancy at Birth (`SP.DYN.LE00.IN`)
   - Under-5 Mortality Rate (`SH.DYN.MORT`)
