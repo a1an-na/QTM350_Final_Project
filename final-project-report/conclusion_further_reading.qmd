@@ -1,3 +1,7 @@
 ---
 title: "Conclusion and Further Reading"
 ---
+
+Our analysis reveals a distinct relationship between a country's income level and its population health indicators. High-income countries such as the United Kingdom tend to have higher life expectancy and lower under-5 mortality and adolescent fertility rates. Low and middle-income countries such as Afghanistan and Kenya show the opposite trends. Such disparities highlight the importance of investment in healthcare, education, and social infrastructure to improve population outcomes.
+
+Our analysis only focused on five countries, future work could expand the dataset to include more countries and explore regional trends or changes before and after major global events (e.g., COVID-19). Additionally, incorporating other relevant variables, such as healthcare spending, education levels, or urbanization, could further a more comprehensive understanding of the drivers behind population health.

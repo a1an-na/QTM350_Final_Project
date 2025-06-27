@@ -8,3 +8,11 @@ author: "Alan Na (emory id) and Jennifer Gu (2606428)"
 This is a Quarto website.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+
+This project aims to explore the population dynamic between five countires of ranging income values: Afghanistan, Kenya, India, Brazil, and the United Kingdom. Using data from the World Bank, we analyze three key indicators: life expectancy, under-5 mortality rate, and adolescent fertility rate from 2000 to 2023.
+
+Our primary research question is: How do population dynamics compare between countries of different income levels?
+
+We find that higher-income countries tend to have higher life expectancy and lower mortality and fertility rates. While lower-income countries display the opposite trend, highlighting the strong connection between income level and population health outcome.
+

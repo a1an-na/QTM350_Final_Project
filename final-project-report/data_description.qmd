@@ -1,3 +1,28 @@
 ---
 title: "Data Description"
 ---
+
+We used data from the World Bank's World Development Indicators (WDI) to examine population dynamics across five countries: Afghanistan, Kenya, India, Brazil, and the United Kingdom. These countries were selected to represent income levels ranging from low-income to high-income. This allows for meaningful comparisons across development contexts.
+
+We focused specifically on three indicators ranging from 2000 to 2023:
+
+Life expectancy at birth (SP.DYN.LE00.IN)
+
+Under-5 mortality rate (SH.DYN.MORT)
+
+Adolescent fertility rate (SP.ADO.TFRT)
+
+
+The data was accessed via the wbdata Python package and cleaned using SQL. We filtered the data to include only the selected countries and relevant years. We reshaped the dataset from long to wide format, with each row representing a single country-year observation and separate columns for each indicator. Missing values were removed to ensure consistent/accurate analysis.
+
+Final variables in our dataset:
+
+country – country name (e.g., “India”)
+
+year – year of observation (2000–2023)
+
+life_expectancy – average years at birth
+
+under5_mortality – deaths per 1,000 live births
+
+adolescent_fertility – births per 1,000 women aged 15–19
