@@ -1,3 +1,7 @@
 ---
 title: "Results and Discussion"
 ---
+
+# Limitations
+
+However, while India has reached an adolescent fertility rate comparable to that of the United Kingdom, it's enrollment rate is still relatively lower. Other variables, such as marital age and access to contraceptives, may have an affect as well. In addition, there could also be limitations to data collection in countries with lower income; if less information is collected on the adolescent fertility rate, there may be potential innaccuracies.
