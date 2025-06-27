@@ -28,6 +28,14 @@ under5_mortality – deaths per 1,000 live births
 adolescent_fertility – births per 1,000 women aged 15–19
 
 
+We used the duckdb package to efficiently query and transform data using SQL syntax within Python. It was primarily used to:
+Create views for the cleaned dataset, Filter and reshape data,
+Aggregate indicators including life expectancy, under-5 mortality, and adolescent fertility.
+
+
+
+
+
 ### Average Life Expectancy by Country (2000–2023)
 
 | Country           | Mean  | Min   | Median | Max   |
