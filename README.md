@@ -33,7 +33,7 @@ This repository is organized into the following folders:
 - [scripts](https://github.com/a1an-na/QTM350_Final_Project/tree/main/scripts) – Python scripts for data cleaning, visualizations, and the codebook creation.
 - Any remaining files are hidden files.
 
-# Website and Report
+## Website and Report
 For this project, we created a Quarto report (output pdf and html) and a Quarto website.
 
 * The website is available through GitHub Pages [HERE](https://a1an-na.github.io/QTM350_Final_Project/).
