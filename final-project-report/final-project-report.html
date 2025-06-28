@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Alan Na (2588698) and Jennifer Gu (2606428)">
+<meta name="dcterms.date" content="2025-06-27">
+
+<title>Population Dynamics Across Income Levels Report – Population Dynamics Across Income Levels</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-cf3f2c26eef976f46b51aa29f3e196e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Population Dynamics Across Income Levels</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data_description.html"> 
+<span class="menu-text">Data Description</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../data_analysis.html"> 
+<span class="menu-text">Data Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../results_discussion.html"> 
+<span class="menu-text">Results and Discussion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../conclusion_further_reading.html"> 
+<span class="menu-text">Conclusion</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description">Data Description</a>
+  <ul class="collapse">
+  <li><a href="#average-life-expectancy-by-country-20002023" id="toc-average-life-expectancy-by-country-20002023" class="nav-link" data-scroll-target="#average-life-expectancy-by-country-20002023">Average Life Expectancy by Country (2000–2023)</a></li>
+  <li><a href="#under-5-mortality-rate-by-country-20002023" id="toc-under-5-mortality-rate-by-country-20002023" class="nav-link" data-scroll-target="#under-5-mortality-rate-by-country-20002023">Under-5 Mortality Rate by Country (2000–2023)</a></li>
+  <li><a href="#adolescent-fertility-rate-by-country-20002023" id="toc-adolescent-fertility-rate-by-country-20002023" class="nav-link" data-scroll-target="#adolescent-fertility-rate-by-country-20002023">Adolescent Fertility Rate by Country (2000–2023)</a></li>
+  </ul></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#life-expectancy-analysis" id="toc-life-expectancy-analysis" class="nav-link" data-scroll-target="#life-expectancy-analysis">Life Expectancy Analysis</a></li>
+  <li><a href="#adolescent-fertility-analysis" id="toc-adolescent-fertility-analysis" class="nav-link" data-scroll-target="#adolescent-fertility-analysis">Adolescent Fertility Analysis</a>
+  <ul class="collapse">
+  <li><a href="#adolescent-fertility-and-secondary-school-enrollment" id="toc-adolescent-fertility-and-secondary-school-enrollment" class="nav-link" data-scroll-target="#adolescent-fertility-and-secondary-school-enrollment">Adolescent Fertility and Secondary School Enrollment</a></li>
+  </ul></li>
+  <li><a href="#under-5-mortality-rate-analysis" id="toc-under-5-mortality-rate-analysis" class="nav-link" data-scroll-target="#under-5-mortality-rate-analysis">Under-5 Mortality Rate Analysis</a>
+  <ul class="collapse">
+  <li><a href="#under-5-mortality-and-adolescent-fertility" id="toc-under-5-mortality-and-adolescent-fertility" class="nav-link" data-scroll-target="#under-5-mortality-and-adolescent-fertility">Under-5 Mortality and Adolescent Fertility</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
+  <ul class="collapse">
+  <li><a href="#life-expectancy-adolescent-fertility-and-under-5-mortality-discussion" id="toc-life-expectancy-adolescent-fertility-and-under-5-mortality-discussion" class="nav-link" data-scroll-target="#life-expectancy-adolescent-fertility-and-under-5-mortality-discussion">Life Expectancy, Adolescent Fertility, and Under-5 Mortality Discussion</a></li>
+  <li><a href="#sec-af-sse" id="toc-sec-af-sse" class="nav-link" data-scroll-target="#sec-af-sse">Adolescent Fertility and Secondary School Enrollment</a></li>
+  <li><a href="#under-5-mortality-and-adolescent-fertility-1" id="toc-under-5-mortality-and-adolescent-fertility-1" class="nav-link" data-scroll-target="#under-5-mortality-and-adolescent-fertility-1">Under-5 Mortality and Adolescent Fertility</a></li>
+  <li><a href="#sec-limitations" id="toc-sec-limitations" class="nav-link" data-scroll-target="#sec-limitations">Limitations</a></li>
+  </ul></li>
+  <li><a href="#conclusion-and-further-reading" id="toc-conclusion-and-further-reading" class="nav-link" data-scroll-target="#conclusion-and-further-reading">Conclusion and Further Reading</a>
+  <ul class="collapse">
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="final-project-report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Population Dynamics Across Income Levels Report</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alan Na (2588698) and Jennifer Gu (2606428) </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 27, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Population dyamics is the study of how population characterstics change over time. Examples of these characteristics include birth and death rates, age distributions, and population size and density. Most importantly, population dynamics help us understand how and why populations evolve in structure and makeup, and allow us to consider how changes in populations interact with key components of human societies, such as economics, public health, and government.</p>
+<p>This project aims to explore the population dynamics between five countires of ranging income values: Afghanistan, Kenya, India, Brazil, and the United Kingdom. Using data from the <a href="https://databank.worldbank.org/source/world-development-indicators">World Bank Development Indicators (WDI)</a>, we analyze three key indicators: life expectancy, adolescent fertility rate, and under-5 mortality rate from 2000 to 2023.</p>
+<p>The primary research question we focus on is: How do population dynamics compare between countries of different income levels?</p>
+<p>We find that while there have been overall improvements on life expectancy, adolescent fertility, and under-5 mortality over time, higher-income countries tend to have higher life expectancy and lower mortality and fertility rates. Lower-income countries display the opposite trend, highlighting the strong connection between income level and population health outcome. Additionally, we found key relationships between adolescent fertility and secondary school enrollment, as well as adolescent fertility and under-5 mortality.</p>
+</section>
+<section id="data-description" class="level1">
+<h1>Data Description</h1>
+<p>We used data from the <a href="https://databank.worldbank.org/source/world-development-indicators">World Bank’s World Development Indicators (WDI)</a> to examine population dynamics across five countries: Afghanistan, Kenya, India, Brazil, and the United Kingdom. These countries were selected to represent income levels ranging from low-income to high-income, based on the <a href="https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html">World Bank’s Classification of the world by income and region</a>. Specifically, Afghanistan is low-income, Kenya and India and lower-middle income, Brazil is upper-middle income, and the United Kingdom is classified as high-income. This allows for meaningful comparisons across development contexts.</p>
+<p>We focused specifically on three indicators ranging from 2000 to 2023. Below are the indicators and their unique WDI codes:</p>
+<ol type="1">
+<li>Life expectancy at birth (SP.DYN.LE00.IN)</li>
+<li>Adolescent fertility rate (SP.ADO.TFRT)</li>
+<li>Under-5 mortality rate (SH.DYN.MORT)</li>
+</ol>
+<p>We also included the secondary school enrollment indicator (SE.SEC.ENRR) to use for our analysis on adolescent fertility.</p>
+<p>The data was accessed via the wbdata Python package. First, we used Python to import the necessary packages and select our countries and indicators. Then, we extracted the year from the date column, and filtered the data to include only observations from the selected countries and relevant years.</p>
+<p>We used the duckdb package to create a view (wdi_raw) and query and transform data using SQL syntax within Python. Using SQL syntax, we selected the country, year, and indicator columns. We took the maximum of each indicator to avoid duplicates, and grouped and ordered by country and year to organize our data. We then returned this dataset as a Pandas dataframe before saving it as a csv file to our data folder.</p>
+<p>The final variables in our dataset are:</p>
+<ul>
+<li>country: country name (e.g., “India”)</li>
+<li>year: year of observation (2000–2023)</li>
+<li>life_expectancy: average years at birth</li>
+<li>adolescent_fertility: births per 1,000 women aged 15–19</li>
+<li>under5_mortality: deaths per 1,000 live births</li>
+<li>secondary_school_enrollment: ratio of students enrolled in secondary school to the population of the age group</li>
+</ul>
+<p>Below are our summary statistics for our three primary indicators:</p>
+<section id="average-life-expectancy-by-country-20002023" class="level3">
+<h3 class="anchored" data-anchor-id="average-life-expectancy-by-country-20002023">Average Life Expectancy by Country (2000–2023)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Mean</th>
+<th>Min</th>
+<th>Median</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>80.09</td>
+<td>77.74</td>
+<td>80.52</td>
+<td>81.37</td>
+</tr>
+<tr class="even">
+<td>Brazil</td>
+<td>73.44</td>
+<td>69.58</td>
+<td>73.91</td>
+<td>75.85</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>67.45</td>
+<td>62.75</td>
+<td>67.45</td>
+<td>72.00</td>
+</tr>
+<tr class="even">
+<td>Kenya</td>
+<td>60.53</td>
+<td>56.08</td>
+<td>61.25</td>
+<td>63.65</td>
+</tr>
+<tr class="odd">
+<td>Afghanistan</td>
+<td>60.49</td>
+<td>55.00</td>
+<td>60.98</td>
+<td>66.04</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="under-5-mortality-rate-by-country-20002023" class="level3">
+<h3 class="anchored" data-anchor-id="under-5-mortality-rate-by-country-20002023">Under-5 Mortality Rate by Country (2000–2023)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Mean</th>
+<th>Min</th>
+<th>Median</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>5.18</td>
+<td>4.40</td>
+<td>4.90</td>
+<td>6.50</td>
+</tr>
+<tr class="even">
+<td>Brazil</td>
+<td>20.18</td>
+<td>14.40</td>
+<td>17.55</td>
+<td>34.50</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>55.70</td>
+<td>27.70</td>
+<td>53.50</td>
+<td>91.60</td>
+</tr>
+<tr class="even">
+<td>Kenya</td>
+<td>58.16</td>
+<td>39.90</td>
+<td>51.70</td>
+<td>96.30</td>
+</tr>
+<tr class="odd">
+<td>Afghanistan</td>
+<td>87.44</td>
+<td>55.50</td>
+<td>82.90</td>
+<td>131.70</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="adolescent-fertility-rate-by-country-20002023" class="level3">
+<h3 class="anchored" data-anchor-id="adolescent-fertility-rate-by-country-20002023">Adolescent Fertility Rate by Country (2000–2023)</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Country</th>
+<th>Mean</th>
+<th>Min</th>
+<th>Median</th>
+<th>Max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>United Kingdom</td>
+<td>19.28</td>
+<td>8.36</td>
+<td>20.88</td>
+<td>28.73</td>
+</tr>
+<tr class="even">
+<td>India</td>
+<td>46.11</td>
+<td>14.06</td>
+<td>40.16</td>
+<td>114.35</td>
+</tr>
+<tr class="odd">
+<td>Brazil</td>
+<td>64.43</td>
+<td>42.69</td>
+<td>64.53</td>
+<td>85.61</td>
+</tr>
+<tr class="even">
+<td>Kenya</td>
+<td>93.82</td>
+<td>56.31</td>
+<td>102.42</td>
+<td>123.25</td>
+</tr>
+<tr class="odd">
+<td>Afghanistan</td>
+<td>102.32</td>
+<td>64.07</td>
+<td>98.45</td>
+<td>154.31</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="data-analysis" class="level1">
+<h1>Data Analysis</h1>
+<p>As stated in our introduction, our research question is: <strong>How do population dynamics compare between countries of different income-levels?</strong> To answer this question, we will examine three different indicators: life expectancy, adolescent fertility, and under-5 mortality rate.</p>
+<p>We’ll be using the pandas, matplotlib, and seaborn libraries for our analysis.</p>
+<div id="8fae2b5a" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import Libraries and Read Cleaned Dataset</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'population_dynamics_clean.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="life-expectancy-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="life-expectancy-analysis">Life Expectancy Analysis</h2>
+<p>We’ll begin by looking at life expectancy over time by country. <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a> is a plot of life expectancy years from 2000 - 2023.</p>
+<p>Based on the different lines, we see a generally increasing trend in life expectancy for all 5 countries. Additionally, there is a signficant dip in life expectancy for all countries around 2020-2021. This is likely an effect of the COVID-19 global pandemic. According to the <a href="https://www.who.int/news/item/24-05-2024-covid-19-eliminated-a-decade-of-progress-in-global-level-of-life-expectancy">World Health Organization</a>, global life expectancy deceased 1.8 years to 71.4 years from 2019 to 2021, which is similar to the life expectancy we saw in 2012. This, which we can see in <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>, is approximately true for our selection of countries.</p>
+<div id="cell-fig-1" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Life Expectancy Rate by Country Over Time</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>sns.lineplot(</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    data<span class="op">=</span>df,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">"year"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    y<span class="op">=</span><span class="st">"life_expectancy"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    hue<span class="op">=</span><span class="st">"country"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">"o"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Life Expectancy Over Time by Country"</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Life Expectancy (Years)"</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">"Country"</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-1" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="final-project-report_files/figure-html/fig-1-output-1.png" width="949" height="563" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Life Expectancy from 2000 - 2023
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>While we see some general parallels, the life expectancy within these countries still vary drastically. <a href="#fig-2" class="quarto-xref">Figure&nbsp;2</a> depicts the selection of countries in order, from low-income, to lower-middle, to upper-middle, and to high. The height of the bars represents average life expectancy from more recent years, 2017 - 2023. People in high income countries have higher life expectancies than those in low income countries. In other words, life expectancy seems to be positively linked with a country’s GNI.</p>
+<div id="cell-fig-2" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar plot of average life expectancy per country</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>avg_life_exp <span class="op">=</span> (</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'year'</span>].between(<span class="dv">2017</span>, <span class="dv">2023</span>)]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"country"</span>)[<span class="st">"life_expectancy"</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    .reset_index()</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>country_order <span class="op">=</span> [<span class="st">'Afghanistan'</span>, <span class="st">'Kenya'</span>, <span class="st">'India'</span>, <span class="st">'Brazil'</span>, <span class="st">'United Kingdom'</span>]</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>sns.barplot(data<span class="op">=</span>avg_life_exp, x<span class="op">=</span><span class="st">"country"</span>, y<span class="op">=</span><span class="st">"life_expectancy"</span>, order<span class="op">=</span>country_order)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Average Life Expectancy (2017–2023) by Country"</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Average Life Expectancy (Years)"</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Country"</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="final-project-report_files/figure-html/fig-2-output-1.png" width="757" height="468" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Average Life Expectancy from 2017 - 2023
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>A table of these average life expectancies is also shown in <a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a>. High-income countries, such as the United Kingdom, have generally higher life expectancy. The United Kingdom life expectancy hovers near the top edge of the plot in <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a>, and in <a href="#tbl-1" class="quarto-xref">Table&nbsp;1</a>, we see that it has a high average life expectancy of around 81.0 years. However, for low-income countries, such as Afghanistan, we see a significantly lower life expectancy of around 63.0 years. Thus, again, there appears to be a rather strong correlation between a country’s income level and their life expectancy.</p>
+<div class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Average Life Expectancy by Country</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>table_1 <span class="op">=</span> (</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'year'</span>].between(<span class="dv">2017</span>, <span class="dv">2023</span>)]</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">'country'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'life_expectancy'</span>]</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>table_1.columns <span class="op">=</span> [<span class="st">'Country'</span>, <span class="st">'Average Life Expectancy (2017–2023)'</span>]</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>table_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-1" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1
+</figcaption>
+<div aria-describedby="tbl-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe do-not-create-environment caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">Average Life Expectancy (2017–2023)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>63.045</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Brazil</td>
+<td>75.013</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>India</td>
+<td>70.338</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Kenya</td>
+<td>62.644</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>United Kingdom</td>
+<td>81.016</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Average Life Expectancy from 2017 - 2023</p>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</section>
+<section id="adolescent-fertility-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="adolescent-fertility-analysis">Adolescent Fertility Analysis</h2>
+<p>Our second indicator for population dynamics is adolescent fertility rate. <a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a> shows adolescent fertility rates over time for our selection of countries. There appear to be drastic decreases for lower and lower-middle countries, such as India. Notably, India had high adolescent fertility rates, comparable to those of Afghanistan and Kenya in 2000, but decreased quickly, and currently has a much low adolescent fertility rate. India’s improvement, as well as the decreases in adolescent fertility rates for other non-high-income countries (Afghanistan, Kenya, and Brazil) demonstrates a level of global improvement on this indicator.</p>
+<div id="cell-fig-3" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adolescent Fertility Rate by Country Over Time</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the data for plotting</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>pivot_df <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'year'</span>, columns<span class="op">=</span><span class="st">'country'</span>, values<span class="op">=</span><span class="st">'adolescent_fertility'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the line graph</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>pivot_df.plot(ax<span class="op">=</span>plt.gca(), marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Adolescent Fertility Rate by Country Over Time'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Adolescent Fertility Rate'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Country'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>plt.xticks(pivot_df.index, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="final-project-report_files/figure-html/fig-3-output-1.png" width="1140" height="757" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Adolescent Fertility Rates from 2000 - 2023
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="adolescent-fertility-and-secondary-school-enrollment" class="level3">
+<h3 class="anchored" data-anchor-id="adolescent-fertility-and-secondary-school-enrollment">Adolescent Fertility and Secondary School Enrollment</h3>
+<p>Still, as shown in <a href="#tbl-2" class="quarto-xref">Table&nbsp;2</a>, there are signficantly wide gaps in adolescent fertility rates between lower- and higher-income countries. The United Kingdom has an average rate of approximately 10.1, whereas Afghanistan has a rate of around 70. This is a drastic difference, and one that still needs contionous attention and amendment.</p>
+<div class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Average Adolescent Fertility Rate by Country</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>table_2 <span class="op">=</span> (</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'year'</span>].between(<span class="dv">2017</span>, <span class="dv">2023</span>)]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">'country'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'adolescent_fertility'</span>]</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>table_2.columns <span class="op">=</span> [<span class="st">'Country'</span>, <span class="st">'Average Adolescent Fertility (2017–2023)'</span>]</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>table_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-2" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="6">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2
+</figcaption>
+<div aria-describedby="tbl-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div>
+
+
+<table class="dataframe do-not-create-environment caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">Average Adolescent Fertility (2017–2023)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>69.167</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Brazil</td>
+<td>48.643</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>India</td>
+<td>14.579</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Kenya</td>
+<td>61.568</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>United Kingdom</td>
+<td>10.161</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Average Adolescent Fertility Rates from 2017 - 2023</p>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>In addition to looking at adolescent fertility rates over time, we will examine how these rates interact with secondary school enrollment.</p>
+<p>Adolescent fertility rates consider girls ages 15 - 19. Most of these years align with secondary-school-enrollment years, which is typically around the 14 - 18 age range. Education can better students’ knowledge of reproductive health and the importance of contraception, and empower women to focus on their academics and career, which may delay child marriage. So, we will observe how education (secondary school enrollment, in particular) interacts with adolescent fertility rates in different countries.</p>
+<p><a href="#fig-4" class="quarto-xref">Figure&nbsp;4</a> shows the adolescent fertility and secondary-school-enrollment rates over time. We chose the countries of India and the United Kingdom based on their income-level designations (lower-middle and high, respectively) as well as their availablity of secondary-school-enrollment data compared to other countries.</p>
+<p>For India, as secondary school enrollment steadily increases, the adolescent fertility rate decreases quite drastically, suggesting an inverse correlation between these two variables. For the United Kingdom, we see an increase in enrollment rates through the years, as well as a slight decrease in adolescent fertility, reflecting said inverse correlation. Additionally, enrollment rates have been relatively high and adolescent fertility rates low from 2000 - 2023, further emphasizing this inverse correlation. Considering both countries’ plots, increasing secondary school enrollment is likely highly associated with decreasing adolescent fertility rates.</p>
+<div id="cell-fig-4" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Adolescent Fertility Rate and Secondary School Enrollment</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the data for plotting</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>pivot_df_adolescent_fertility <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'year'</span>, columns<span class="op">=</span><span class="st">'country'</span>, values<span class="op">=</span><span class="st">'adolescent_fertility'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>pivot_df_secondary_school_enrollment <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'year'</span>, columns<span class="op">=</span><span class="st">'country'</span>, values<span class="op">=</span><span class="st">'secondary_school_enrollment'</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the graphs</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>), sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co"># India</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility.index,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility[<span class="st">'India'</span>],</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'o'</span>,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Adolescent Fertility Rate'</span>,</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:blue'</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    pivot_df_secondary_school_enrollment.index,</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    pivot_df_secondary_school_enrollment[<span class="st">'India'</span>],</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'s'</span>,</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Secondary School Enrollment'</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:orange'</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">'India'</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Rate'</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].tick_params(axis<span class="op">=</span><span class="st">'x'</span>, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a><span class="co"># United Kingdom</span></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility.index,</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility[<span class="st">'United Kingdom'</span>],</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'o'</span>,</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Adolescent Fertility Rate'</span>,</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:blue'</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>    pivot_df_secondary_school_enrollment.index,</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    pivot_df_secondary_school_enrollment[<span class="st">'United Kingdom'</span>],</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'s'</span>,</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Secondary School Enrollment'</span>,</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:orange'</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">'United Kingdom'</span>)</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].tick_params(axis<span class="op">=</span><span class="st">'x'</span>, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Adolescent Fertility Rate and Secondary School Enrollment</span><span class="ch">\n</span><span class="st">(India and United Kingdom)'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>plt.tight_layout(rect<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">0.03</span>, <span class="dv">1</span>, <span class="fl">0.95</span>])</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-4" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="final-project-report_files/figure-html/fig-4-output-1.png" width="1333" height="550" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Adolescent Fertility and Secondary School Enrollment Rates: India and United Kingdom
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="under-5-mortality-rate-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="under-5-mortality-rate-analysis">Under-5 Mortality Rate Analysis</h2>
+<p>Our final indicator is under-5 mortality rate. <a href="#fig-5" class="quarto-xref">Figure&nbsp;5</a> shows the under-5 mortality rate for our selected countries over time. We see a general decrease in mortality rate for all countries, demonstrating that we’re improving this indicator on a global level.</p>
+<div id="cell-fig-5" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Under 5 Mortality Rate by Country Over Time</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the data for plotting</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>pivot_df <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'year'</span>, columns<span class="op">=</span><span class="st">'country'</span>, values<span class="op">=</span><span class="st">'under5_mortality'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the line graph</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>pivot_df.plot(ax<span class="op">=</span>plt.gca(), marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Under 5 Mortality Rate by Country Over Time'</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Under 5 Mortality Rate'</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.legend(title<span class="op">=</span><span class="st">'Country'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.05</span>, <span class="dv">1</span>), loc<span class="op">=</span><span class="st">'upper left'</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.xticks(pivot_df.index, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-5" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="final-project-report_files/figure-html/fig-5-output-1.png" width="1140" height="757" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Under-5 Mortality Rates from 2000 - 2023
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>However, like previous indicators, there appears to be signficant differences in the mortality rate as shown in <a href="#tbl-3" class="quarto-xref">Table&nbsp;3</a>. Afghanistan, at the lowest income-level, has a very high under-5 mortality rate of 61.4. Kenya and India, both lower-middle income countries, have mortality rates of 42.7 and 32.7, respectively. We see more improvement as income-level increases. For Brazil, an upper-middle-income country, the under-5 mortality rate is 14.9, and for the United Kingdom, a high-income country, the rate is very low, at 4.4. A country’s GNI, then, seems to have a strong bearing on their child mortality rate, which is generally similar to what we previously saw with GNI and adolescent fertility in <a href="#tbl-2" class="quarto-xref">Table&nbsp;2</a>.</p>
+<div class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Average Under 5 Mortality Rate by Country</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>table_3 <span class="op">=</span> (</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">'year'</span>].between(<span class="dv">2017</span>, <span class="dv">2023</span>)]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">'country'</span>, as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">'under5_mortality'</span>]</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    .mean()</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    .<span class="bu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>table_3.columns <span class="op">=</span> [<span class="st">'Country'</span>, <span class="st">'Under-5 Mortality (2017–2023)'</span>]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>table_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="tbl-3" class="cell quarto-float quarto-figure quarto-figure-center anchored" data-execution_count="9">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl quarto-uncaptioned" id="tbl-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3
+</figcaption>
+<div aria-describedby="tbl-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div>
+
+
+<table class="dataframe do-not-create-environment caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">Under-5 Mortality (2017–2023)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Afghanistan</td>
+<td>61.400</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Brazil</td>
+<td>14.886</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>India</td>
+<td>32.743</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Kenya</td>
+<td>42.657</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>United Kingdom</td>
+<td>4.429</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<p>Average Under-5 Mortality Rates from 2017 - 2023</p>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<section id="under-5-mortality-and-adolescent-fertility" class="level3">
+<h3 class="anchored" data-anchor-id="under-5-mortality-and-adolescent-fertility">Under-5 Mortality and Adolescent Fertility</h3>
+<p>In order to better understand the relationship between adolescent fertility and under-5 mortality, we plotted the two variables over time for two countries with very different income levels: Afghanistan and the United Kingdom. This is shown in <a href="#fig-6" class="quarto-xref">Figure&nbsp;6</a>. Based on the parallel downward curves we see in both plots, especially that of Afghanistan, adolescent fertility and under-5 mortality are strongly linked. Additionally, we can clearly see the differences in both of these indicators for low- and high-income countries, as Afghanistan’s rates from 2023 are still higher than those of the United Kingdom in 2000.</p>
+<div id="cell-fig-6" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Under 5 Mortality Rate and Adolescent Fertility Rate</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare the data for plotting</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>pivot_df_under5_mortality <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'year'</span>, columns<span class="op">=</span><span class="st">'country'</span>, values<span class="op">=</span><span class="st">'under5_mortality'</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>pivot_df_adolescent_fertility <span class="op">=</span> df.pivot(index<span class="op">=</span><span class="st">'year'</span>, columns<span class="op">=</span><span class="st">'country'</span>, values<span class="op">=</span><span class="st">'adolescent_fertility'</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the graphs</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">14</span>, <span class="dv">6</span>), sharex<span class="op">=</span><span class="va">True</span>, sharey<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Afghanistan</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility.index,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility[<span class="st">'Afghanistan'</span>],</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'o'</span>,</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Adolescent Fertility Rate'</span>,</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:blue'</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].plot(</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    pivot_df_under5_mortality.index,</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    pivot_df_under5_mortality[<span class="st">'Afghanistan'</span>],</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'s'</span>,</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Under-5 Mortality Rate'</span>,</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:orange'</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="st">'Afghanistan'</span>)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">'Rate'</span>)</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend()</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].tick_params(axis<span class="op">=</span><span class="st">'x'</span>, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a><span class="co"># United Kingdom</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility.index,</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>    pivot_df_adolescent_fertility[<span class="st">'United Kingdom'</span>],</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'o'</span>,</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Adolescent Fertility Rate'</span>,</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:blue'</span></span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot(</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>    pivot_df_under5_mortality.index,</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>    pivot_df_under5_mortality[<span class="st">'United Kingdom'</span>],</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>    marker<span class="op">=</span><span class="st">'s'</span>,</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">'Under-5 Mortality Rate'</span>,</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">'tab:orange'</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">'United Kingdom'</span>)</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">'Year'</span>)</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend()</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].tick_params(axis<span class="op">=</span><span class="st">'x'</span>, rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>fig.suptitle(<span class="st">'Under-5 Mortality and Adolescent Fertility Rates</span><span class="ch">\n</span><span class="st">(Afghanistan and United Kingdom)'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>plt.tight_layout(rect<span class="op">=</span>[<span class="dv">0</span>, <span class="fl">0.03</span>, <span class="dv">1</span>, <span class="fl">0.95</span>])</span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="fig-6" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="final-project-report_files/figure-html/fig-6-output-1.png" width="1333" height="550" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Under-5 Mortality &amp; Adolescent Fertility Rates: Afghanistan and United Kingdom
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="results-and-discussion" class="level1">
+<h1>Results and Discussion</h1>
+<section id="life-expectancy-adolescent-fertility-and-under-5-mortality-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="life-expectancy-adolescent-fertility-and-under-5-mortality-discussion">Life Expectancy, Adolescent Fertility, and Under-5 Mortality Discussion</h2>
+<p>To begin discussing results, we’ll start by reviewing all three indicators over time. The following is an interactive bubble chart with under-5 mortality rate on the x-axis, adolescent fertility rate on the y-axis, and life expectancy as bubble size (<strong>note that because we use animations, this plot can only be viewed in HTML</strong>). Each bubble represents a different country. (Note that life expectancy has been normalized in order to better visualize the change from 2000 - 2023. Also, 0.01 was added after this normalization in order to avoid a minimum of 0 years). Our goal in creating this bubble chart is to better visualize the trends and comparisons we discussed throughout our analysis.</p>
+<p>As we progress through time, we see the general trend of increasing life expectancy (the bubble grows larger) and decreasing adolescent fertility as well as under-5 mortality (the bubbles move toward the origin of the graph). This, we saw too in our analyses of our three indicators in the indicator-over-time plots in the Data Analysis Section. Thus, <strong>we see a global improvement for all countries in terms of our indicators.</strong></p>
+<div id="d2c293f0" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.getenv(<span class="st">"QUARTO_FORMAT"</span>) <span class="op">==</span> <span class="st">"html"</span>:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Normalize the life expectancy column to see clearer changes</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 0.01 is added to avoid a minimum value of 0</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">'life_expectancy_norm'</span>] <span class="op">=</span> <span class="fl">0.01</span> <span class="op">+</span> (df[<span class="st">'life_expectancy'</span>] <span class="op">-</span> df[<span class="st">'life_expectancy'</span>].<span class="bu">min</span>()) <span class="op">/</span> (df[<span class="st">'life_expectancy'</span>].<span class="bu">max</span>() <span class="op">-</span> df[<span class="st">'life_expectancy'</span>].<span class="bu">min</span>())</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> px.scatter(</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        df,</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="st">"under5_mortality"</span>,</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        y <span class="op">=</span> <span class="st">"adolescent_fertility"</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        title <span class="op">=</span> <span class="st">"Life Expectancy, Under-5 Mortality, and Adolescent Fertility Rate Over Time"</span>,</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        size <span class="op">=</span> <span class="st">'life_expectancy_norm'</span>,</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>        color <span class="op">=</span> <span class="st">'country'</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>        color_discrete_map <span class="op">=</span> {</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Brazil'</span>: <span class="st">'#ff7f0e'</span>,</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>            <span class="st">'India'</span>: <span class="st">'green'</span>,</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Kenya'</span>: <span class="st">'red'</span>,</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>            <span class="st">'United Kingdom'</span>: <span class="st">'#9467bd'</span>,</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>            <span class="st">'Afghanistan'</span>: <span class="st">'#1f77b4'</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>        hover_name <span class="op">=</span> <span class="st">'country'</span>,</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>        size_max <span class="op">=</span> <span class="dv">60</span>,</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>        animation_frame <span class="op">=</span> <span class="st">'year'</span>,</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>        animation_group <span class="op">=</span><span class="st">'country'</span>,</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>        labels<span class="op">=</span>{</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>            <span class="st">"under5_mortality"</span>: <span class="st">"Under-5 Mortality Rate"</span>,</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>            <span class="st">"adolescent_fertility"</span>: <span class="st">"Adolescent Fertility Rate"</span>,</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>            <span class="st">"life_expectancy_norm"</span>: <span class="st">"Life Expectancy (Normalized)"</span></span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>    fig.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Additionally, in our analysis, we looked at the averages of our indicators from 2017 to 2023, and noticed that a country’s income-level is closely associated with its average indicator value. That is, <strong>even though there have been overall improvements over time, lower life expectancy, higher adolescent fertility rates, and higher under-5 mortality rates are still closely associated with lower-income countries.</strong></p>
+<p>Further, if we pause the bubble chart on 2023, we can see that the countries, while having improved quite a lot since 2000, still appear in order of income level on the x- and y-axes (all except for India’s adolescent fertility rate, which is discussed below in <a href="#sec-limitations" class="quarto-xref">Section&nbsp;4.4</a>). In 2023, Afghanistan still hasn’t reached an under-5 mortality rate lower than that of Brazil’s in 2000, and Kenya has only made small improvements to life expectancy compared to other countries. <strong>Although there has been improvement, a lot of this improvement has been slow and difficult; while high-income countries have consistently strong indicator levels, countries of lower incomes not only face weaker indicator levels, but also greater hardship in breaking existing structures and reaching the ideal.</strong></p>
+</section>
+<section id="sec-af-sse" class="level2">
+<h2 class="anchored" data-anchor-id="sec-af-sse">Adolescent Fertility and Secondary School Enrollment</h2>
+<p>We also analyzed adolescent fertility and secondary school enrollment. As mentioned in our analysis, we selected India and the United Kingdom based on their income category designations. This is because a country’s access to education generally correlates with their GNI, as more money can be invested in schools and teachers. On the other hand, greater access to education is known to improve a country’s economy as well, by increasing human capital and innovation.</p>
+<p>We found that <strong>secondary school enrollment and adolescent fertility are inversely correlated.</strong> As the former increases, the latter decreases. Access to education can potentially lead to lower adolescent fertility rates, but this is only possible through a high income level.</p>
+</section>
+<section id="under-5-mortality-and-adolescent-fertility-1" class="level2">
+<h2 class="anchored" data-anchor-id="under-5-mortality-and-adolescent-fertility-1">Under-5 Mortality and Adolescent Fertility</h2>
+<p>Finally, we found a <strong>strong positive correlation between under-5 mortality and adolescent fertility.</strong></p>
+<p>Intuitively, the strong positive correlation we found makes sense, as adolescent fertility is associated with complications during childbirth, and adolescents tend to be less suitable caretakers due to a lack of money and resources. Complications during childbirth as well as inefficient infant care can lead to child mortality. Thus, seeing a decrease in adolescent fertility would also likely come with a decrease in under-5 mortality.</p>
+<p>But we may also consider this correlation from an economic perspective. Lower-income countries may not have the money to provide good reproductive healthcare and suitable nutrition for infants and children, or the resources to build good education systems to discourage adolescent fertility.</p>
+</section>
+<section id="sec-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="sec-limitations">Limitations</h2>
+<p>There are several limitations of this report that we will point out.</p>
+<p>First, is India’s adolescent-fertility rate improvement. In <a href="#fig-3" class="quarto-xref">Figure&nbsp;3</a> in the Data Analysis section, India reaches an adolescent fertility rate comparable to that of the United Kingdom by 2023. This may be due to their increasing secondary-school enrollment rates, as discussed in <a href="#sec-af-sse" class="quarto-xref">Section&nbsp;4.2</a>. Other variables, such as access to contraceptives, may have an affect as well, and could be studied through additional research. However, there may also be potential limitations to data collection in countries with lower income, such as India. If less information is collected on the adolescent fertility rate, there may be potential innaccuracies in the data to keep in consideration.</p>
+<p>Additionally, this report considered a wide variety of countries. These countries vary not only in income level, but also in infrastructure, systems of government, culture, stigmas, and more, which are beyond the scope of this study. While income level plays a role in a country’s population dynamics, so too do many other factors that may be considered for further research opportunities.</p>
+</section>
+</section>
+<section id="conclusion-and-further-reading" class="level1">
+<h1>Conclusion and Further Reading</h1>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>Our key findings from our anlysis are as follows:</p>
+<ol type="1">
+<li>There have been overall improvements in life expectancy, adolescent fertility, and under-5 mortality since 2000.</li>
+<li>While these improvements exist, there are still significant gaps in population health between countries of high- and low-income. These gaps signify a relationship between income level and our indicators. Specifically, life expectancy is positively correlated with income level, and adolescent fertility and under-5 mortality are inversely correlated with income level.</li>
+<li>There is a strong inverse relationship between adolescent fertility and secondary school enrollment.</li>
+<li>There is a strong positive relationship between under-5 mortality and adolescent fertility.</li>
+</ol>
+<p>Our analysis reveals a distinct relationship between a country’s income level and its population health indicators. High-income countries such as the United Kingdom tend to have higher life expectancy and lower under-5 mortality and adolescent fertility rates. Low and lower-middle-income countries such as Afghanistan and Kenya show the opposite trends. While there have been improvements to all of the selected countries over time, such disparities highlight the importance of investment in education and healthcare to improve population outcomes.</p>
+<p>Further, our analysis only focused on five countries. Future work could expand the dataset to include more countries and explore regional trends or changes before and after major global events (e.g., COVID-19). Additionally, incorporating other relevant variables, such as healthcare spending, education levels, or urbanization, could further a more comprehensive understanding of the drivers behind population health.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<ul>
+<li><a href="https://www.worldbank.org/ext/en/home">World Bank</a></li>
+<li><a href="https://data.worldbank.org/indicator/SP.ADO.TFRT">World Bank Adolescent Fertility</a></li>
+<li><a href="https://documents.worldbank.org/en/publication/documents-reports/api">World Bank API Documentation</a></li>
+<li><a href="https://datatopics.worldbank.org/world-development-indicators/the-world-by-income-and-region.html">World Bank Classification of the World by Income and Region</a></li>
+<li><a href="https://databank.worldbank.org/source/world-development-indicators">World Bank Development Indicators</a></li>
+<li><a href="https://data.worldbank.org/indicator/SP.DYN.LE00.IN">World Bank Life Expectancy At Birth</a></li>
+<li><a href="https://data.worldbank.org/indicator/SE.SEC.ENRR">World Bank Secondary School Enrollment</a></li>
+<li><a href="https://data.worldbank.org/indicator/SH.DYN.MORT">World Bank Under-5 Mortality</a></li>
+<li><a href="https://www.who.int/news/item/24-05-2024-covid-19-eliminated-a-decade-of-progress-in-global-level-of-life-expectancy">World Health Organization on COVID-19 and Global Life Expectancy</a></li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
