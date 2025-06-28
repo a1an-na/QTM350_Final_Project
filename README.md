@@ -37,7 +37,7 @@ This repository is organized into the following folders:
 For this project, we created a Quarto report (output pdf and html) and a Quarto website.
 
 * The website is available through GitHub Pages [HERE](https://a1an-na.github.io/QTM350_Final_Project/).
-* For the report, rendered PDF and HTML versions have been added to the `final-project-report` folder for easy access.
+* For the report, rendered [PDF](https://github.com/a1an-na/QTM350_Final_Project/blob/main/final-project-report/final-project-report.pdf) and [HTML](https://github.com/a1an-na/QTM350_Final_Project/blob/jennifer/final-project-report/final-project-report.html) versions have been added to the `final-project-report` folder for easy access.
 
 Note that the website and report contain the same content, though the website has an animation feature that can't be viewed in the PDF report.
 
