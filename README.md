@@ -26,7 +26,7 @@ This repository is organized into the following folders:
 - [data](https://github.com/a1an-na/QTM350_Final_Project/tree/main/data) – A cleaned dataset used for the analysis.
 - [docs](https://github.com/a1an-na/QTM350_Final_Project/tree/main/docs) - The output directory for our website.
 - [documentation](https://github.com/a1an-na/QTM350_Final_Project/tree/main/documentation) – Supporting documentation including codebooks and an entity-relationship diagram.
-- [figures] - PNG files of the plots and tables generated from the scripts.
+- [figures](https://github.com/a1an-na/QTM350_Final_Project/tree/main/figures) - PNG files of the plots and tables generated from the scripts.
 - [final-project-report](https://github.com/a1an-na/QTM350_Final_Project/tree/main/final-project-report) – Quarto files for the final report.
 - [README.md](https://github.com/a1an-na/QTM350_Final_Project/blob/main/README.md) – Overview of the project and structure.
 - [scripts](https://github.com/a1an-na/QTM350_Final_Project/tree/main/scripts) – Python scripts for data cleaning, visualizations, and the codebook creation.
@@ -53,7 +53,7 @@ These instructions will help you set up the project locally.
     ```
 3. In the scripts folder, open the `QTM350_Final_Project.ipynb` Jupyter Notebook to run the data cleaning scripts. This will create the dataset used for our analysis.
 4. To create other visualizations, open and run the code in the `life_expectancy.ipynb`, `under_5_mortality.ipynb`, and `adolescent_fertility.ipynb` notebooks.
-5. To render and preview the final report, run the following from your terminal:
+5. To render and preview the final website, run the following from your terminal:
     ```bash
     quarto render
     quarto preview

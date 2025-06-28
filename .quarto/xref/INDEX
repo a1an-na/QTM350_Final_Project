@@ -86,5 +86,13 @@
   "scripts/Descriptive_Statistics.ipynb": {
     "Descriptive_Statistics.html": "f7ceb640",
     "Descriptive_Statistics.tex": "28e7cf70"
+  },
+  "final-project-report/Population Dynamics Across Income Levels.qmd": {
+    "Population Dynamics Across Income Levels.html": "1f955c60",
+    "Population-Dynamics-Across-Income-Levels.tex": "171b4803"
+  },
+  "final-project-report/final-project-report.qmd": {
+    "final-project-report.html": "531c38ce",
+    "final-project-report.tex": "c8494515"
   }
 }
